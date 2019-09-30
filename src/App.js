@@ -1,10 +1,10 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import Profile from './components/Profile'
 
 function App() {
   return (
     <div className="App">
-      Portfolio
+      <Profile />
     </div>
   );
 }
