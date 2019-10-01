@@ -1,47 +1,56 @@
 import React from 'react'
 import styled from 'styled-components'
 import githubIcon from '../images/GitHub-Mark-64px.png'
-import linkedinIcon from '../images/LI-In-Bug.png'
+import linkedInIcon from '../images/LI-In-Bug.png'
+import resumeIcon from '../images/resume-icon.png'
 
 export default function Profile() {
   return (
-    <div className="pfrofile">
+    <>
       <UpperLeftBox />
       <ProfileGrid className="profile-picture">
         <ProfilePictureBorder>
           <ProfilePicture />
         </ProfilePictureBorder>
         <Name>
-          WEI-TSE SUN
+          {'WEI-TSE\nSUN'}
         </Name>
-        <LinkIcons 
-          icon={githubIcon} 
-          onClick={() => {window.open('https://github.com/weitsesun')}}
+        <IconBox>
+          <LinkIcons
+            icon={githubIcon}
+            onClick={() => { window.open('https://github.com/weitsesun') }}
           />
-        <LinkIcons 
-          icon={linkedinIcon} 
-          onClick={() => {window.open('https://www.linkedin.com/in/weitse-sun')}}
+          <LinkIcons
+            icon={linkedInIcon}
+            onClick={() => { window.open('https://www.linkedin.com/in/weitse-sun') }}
           />
+          <LinkIcons
+            icon={resumeIcon}
+            onClick={() => { window.open('https://www.dropbox.com/s/vn2gj0n79rjxpg5/WeiTse%28Wayne%29_Sun_Resume.pdf?dl=0') }}
+          />
+        </IconBox>
       </ProfileGrid>
-    </div>
+    </>
   )
 }
 
 const UpperLeftBox = styled.div`
   width: 100px;
   padding-top: 100px;
-  background: hsl(250, 100%, 50%);
+  background: hsl(174, 59%, 61%);
+  box-shadow: 3px 5px 5px 3px #ccc;
 `
 
 const ProfileGrid = styled.div`
   font-size: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
   position: relative;
   top: -75px;
   left: 25px;
-  width: 30%;
+  width: 25%;
+  max-width: 350px;
+  min-width: 250px;
   height: 90vh;
   background: hsl(200, 100%, 50%);
   align-items: center;
@@ -59,7 +68,7 @@ const ProfilePictureBorder = styled.div`
 `
 
 const ProfilePicture = styled.div`
-  content: url(https://wtsesun.s3.us-east-2.amazonaws.com/portfolio/profile_picture/profile_picture.png);
+  content: url(https://wtsesun.s3.us-east-2.amazonaws.com/portfolio/profile_picture/profile_picture2.JPG);
   width: 100%;
   object-fit: contain;
   border-radius: 50%;
@@ -67,11 +76,19 @@ const ProfilePicture = styled.div`
 `
 
 const Name = styled.div`
+  font-family: 'Open Sans', sans-serif;
   color: white;
   padding: 10px;
+  text-align: center;
 `
 
-const LinkIcons = styled.div`
+const IconBox = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+`
+
+const LinkIcons = styled.span`
   content: url(${props => props.icon});
   height: 32px;
   width: 32px;
