@@ -43,5 +43,5 @@ const P = styled.p`
   font-size: 18px;
   font-weight: 100;
   line-height: 1.6em;
-  width: 80%;
+  width: 90%;
 `
