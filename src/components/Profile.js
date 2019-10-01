@@ -6,14 +6,14 @@ import resumeIcon from '../images/resume-icon.png'
 
 export default function Profile() {
   return (
-    <>
+    <ProfileBox>
       <UpperLeftBox />
       <ProfileGrid className="profile-picture">
         <ProfilePictureBorder>
           <ProfilePicture />
         </ProfilePictureBorder>
         <Name>
-          {'WEI-TSE\nSUN'}
+          {'WEI-TSE SUN'}
         </Name>
         <IconBox>
           <LinkIcons
@@ -30,11 +30,14 @@ export default function Profile() {
           />
         </IconBox>
       </ProfileGrid>
-    </>
+    </ProfileBox>
   )
 }
-
+const ProfileBox = styled.div`
+  padding-top: 5%;
+`
 const UpperLeftBox = styled.div`
+  display: block;
   width: 100px;
   padding-top: 100px;
   background: hsl(174, 59%, 61%);
@@ -48,10 +51,11 @@ const ProfileGrid = styled.div`
   position: relative;
   top: -75px;
   left: 25px;
-  width: 25%;
+  width: 100%;
   max-width: 350px;
   min-width: 250px;
-  height: 90vh;
+  height: 95%;
+  min-height: 530px;
   background: hsl(200, 100%, 50%);
   align-items: center;
   justify-content: center;
@@ -76,7 +80,7 @@ const ProfilePicture = styled.div`
 `
 
 const Name = styled.div`
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: white;
   padding: 10px;
   text-align: center;
@@ -90,9 +94,17 @@ const IconBox = styled.div`
 
 const LinkIcons = styled.span`
   content: url(${props => props.icon});
-  height: 32px;
-  width: 32px;
-  padding: 0;
+  height: 35px;
+  width: 35px;
+  padding: 10px;
   margin: 0;
   cursor: pointer;
+  transition: 0.1s;
+
+  &:hover {
+    border: 0.5px solid white;
+    border-radius: 5px;
+    /* box-shadow: 1px 3px 3px 1px #ccc; */
+    background-color: midnightblue;
+  }
 `
