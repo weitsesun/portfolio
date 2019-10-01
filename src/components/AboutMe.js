@@ -8,7 +8,7 @@ export default function AboutMe() {
       <P>Hey, it's Wayne. I’m a Software Engineer located in Bay Area. 
         I build websites by using React/Redux. I acknowledged in building 
         RESTful back-end system by using NodeJS and SQL/NoSQL databases. 
-        I enjoy exploring new ideas from innovative websites and from talented web designers. 
+        I enjoy exploring new ideas from innovative websites and talented web designers. 
         (Check <a href="https://www.awwwards.com/">here</a> for the awards of web development)</P>
         <P>During my free time, I love traveling around the world especially 
           when it snows, I go snowboarding with my trusty Burton Custom X.</P>
