@@ -12,7 +12,7 @@ export default function AboutMe() {
         (Check <a href="https://www.awwwards.com/">here</a> for the awards of web development)</P>
         <P>During my free time, I love traveling around the world especially 
           when it snows, I go snowboarding with my trusty Burton Custom X.</P>
-        <P>Go right to play with my projects➝</P>
+        <P>Go check my projects➝ <a href="https://www.github.com/weitsesun">Github</a></P>
     </AboutMeGrid>
   )
 }
