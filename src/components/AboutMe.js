@@ -9,10 +9,10 @@ export default function AboutMe() {
         I build websites by using React/Redux. I acknowledge in building 
         RESTful back-end system by using NodeJS and SQL/NoSQL databases. 
         I enjoy exploring new ideas from innovative websites and talented web designers. 
-        (Check <a href="https://www.awwwards.com/">here</a> for the awards of web development)</P>
+        (Check <Link href="https://www.awwwards.com/">here</Link> for the awards of web development)</P>
         <P>During my free time, I love traveling around the world especially 
           when it snows, I go snowboarding with my trusty Burton Custom X.</P>
-        <P>Go check my projects➝ <a href="https://www.github.com/weitsesun">Github</a></P>
+        <P>Go check my projects➝ <Link href="https://www.github.com/weitsesun">Github</Link></P>
     </AboutMeGrid>
   )
 }
@@ -45,4 +45,12 @@ const P = styled.p`
   font-weight: 100;
   line-height: 1.6em;
   width: 90%;
+`
+
+const Link = styled.a`
+  color: cyan;
+  text-decoration: none;
+  &:visited {
+    color: lightblue;
+  }
 `
