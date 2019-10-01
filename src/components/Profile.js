@@ -6,14 +6,14 @@ import resumeIcon from '../images/resume-icon.png'
 
 export default function Profile() {
   return (
-    <>
+    <ProfileBox>
       <UpperLeftBox />
       <ProfileGrid className="profile-picture">
         <ProfilePictureBorder>
           <ProfilePicture />
         </ProfilePictureBorder>
         <Name>
-          {'WEI-TSE\nSUN'}
+          {'WEI-TSE SUN'}
         </Name>
         <IconBox>
           <LinkIcons
@@ -30,10 +30,14 @@ export default function Profile() {
           />
         </IconBox>
       </ProfileGrid>
-    </>
+    </ProfileBox>
   )
 }
-
+const ProfileBox = styled.div`
+  height: 98vh;
+  width: 25%;
+  min-width: 400px;
+`
 const UpperLeftBox = styled.div`
   width: 100px;
   padding-top: 100px;
@@ -48,10 +52,11 @@ const ProfileGrid = styled.div`
   position: relative;
   top: -75px;
   left: 25px;
-  width: 25%;
+  width: 100%;
   max-width: 350px;
   min-width: 250px;
-  height: 90vh;
+  height: 95%;
+  min-height: 530px;
   background: hsl(200, 100%, 50%);
   align-items: center;
   justify-content: center;
