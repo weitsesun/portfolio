@@ -13,9 +13,7 @@ export default function ProjectRender() {
 const ProjectRenderBox = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 70%;
+  justify-content: left;
+  width: 72%;
   height: 92vh;
-  border: 1px solid black;
-  border-radius: 2px;
 `

@@ -81,7 +81,7 @@ const ProfilePicture = styled.div`
 `
 
 const Name = styled.div`
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: white;
   padding: 10px;
   text-align: center;
@@ -95,9 +95,17 @@ const IconBox = styled.div`
 
 const LinkIcons = styled.span`
   content: url(${props => props.icon});
-  height: 32px;
-  width: 32px;
-  padding: 0;
+  height: 35px;
+  width: 35px;
+  padding: 10px;
   margin: 0;
   cursor: pointer;
+  transition: 0.1s;
+
+  &:hover {
+    border: 0.5px solid white;
+    border-radius: 5px;
+    box-shadow: 1px 3px 3px 1px #ccc;
+    background-color: midnightblue;
+  }
 `
