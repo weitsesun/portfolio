@@ -100,6 +100,7 @@ const LinkIcons = styled.span`
   margin: 0;
   cursor: pointer;
   transition: 0.1s;
+  border: 0.5px solid transparent;
 
   &:hover {
     border: 0.5px solid white;
