@@ -5,12 +5,13 @@ export default function AboutMe() {
   return (
     <AboutMeGrid>
       <Header>About Me</Header>
-      <P>Hey, it's Wayne. I’m a Software Engineer in Bay Area. I build websites using React/Redux. 
-        And I am acknowledged to built RESTful back-end system using NodeJS and SQL/NoSQL databases. 
-        I enjoy discovering new ideas from innovative websites and talented web designers.
+      <P>Hey, it's Wayne. I’m a Software Engineer located in Bay Area. 
+        I build websites by using React/Redux. I acknowledged in building 
+        RESTful back-end system by using NodeJS and SQL/NoSQL databases. 
+        I enjoy exploring new ideas from innovative websites and talented web designers. 
         (Check <a href="https://www.awwwards.com/">here</a> for the awards of web development)</P>
-        <P>When I'm not coding, I love to travel around the world and,  
-          if there is snow on the mountain, I go snowboarding with my trusty Burton Custom X.</P>
+        <P>During my free time, I love to travel around the world especially 
+          when it snows, I go snowboarding with my trusty Burton Custom X.</P>
         <P>Go right to play with my projects➝</P>
     </AboutMeGrid>
   )
