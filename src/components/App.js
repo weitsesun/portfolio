@@ -1,27 +1,18 @@
 import React from 'react'
-import styled from 'styled-components'
-import '../css/App.css'
 import Profile from './Profile'
 import ProjectRender from './ProjectRender'
-
+import { GlobalStyle, Main } from '../css/ComponentStyle'
 
 function App() {
   return (
-    <Main className="App" >
-      <Profile />
-      <ProjectRender />
-    </Main>
+      <Main className="App" >
+        <GlobalStyle />
+        <Profile />
+        <ProjectRender />
+      </Main>
   );
 }
 
-const Main = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 95vh;
-`
+
 
 export default App;

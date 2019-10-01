@@ -1,5 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
+// import styled from 'styled-components'
+import {
+  AboutMeGrid,
+  Header,
+  P,
+  Link
+} from '../css/ComponentStyle'
 
 export default function AboutMe() {
   return (
@@ -16,41 +22,3 @@ export default function AboutMe() {
     </AboutMeGrid>
   )
 }
-
-const AboutMeGrid = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: coral;
-  color: white;
-  letter-spacing: 0.1em;
-  width: 100%;
-  height: 100%;
-  padding-left: 3em;
-  box-shadow: 3px 5px 5px 3px #ccc;
-  text-align: justify; 
-  max-width: 900px;
-  min-width: 530px;
-  max-height: 700px;
-
-`
-const Header = styled.h1`
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-`
-
-const P = styled.p`
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  font-weight: 100;
-  line-height: 1.6em;
-  width: 90%;
-`
-
-const Link = styled.a`
-  color: cyan;
-  text-decoration: none;
-  &:visited {
-    color: lightblue;
-  }
-`

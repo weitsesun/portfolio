@@ -1,6 +1,7 @@
 import React from 'react'
-import styled from 'styled-components';
 import AboutMe from './AboutMe'
+
+import { ProjectRenderBox } from '../css/ComponentStyle'
 
 export default function ProjectRender() {
   return (
@@ -10,9 +11,4 @@ export default function ProjectRender() {
   )
 }
 
-const ProjectRenderBox = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  height: 92vh;
-`
+
