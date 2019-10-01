@@ -6,7 +6,7 @@ export default function AboutMe() {
     <AboutMeGrid>
       <Header>About Me</Header>
       <P>Hey, it's Wayne. I’m a Software Engineer located in Bay Area. 
-        I build websites by using React/Redux. I acknowledged in building 
+        I build websites by using React/Redux. I acknowledge in building 
         RESTful back-end system by using NodeJS and SQL/NoSQL databases. 
         I enjoy exploring new ideas from innovative websites and talented web designers. 
         (Check <a href="https://www.awwwards.com/">here</a> for the awards of web development)</P>
