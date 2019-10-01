@@ -34,11 +34,10 @@ export default function Profile() {
   )
 }
 const ProfileBox = styled.div`
-  height: 98vh;
-  width: 25%;
-  min-width: 400px;
+  padding-top: 5%;
 `
 const UpperLeftBox = styled.div`
+  display: block;
   width: 100px;
   padding-top: 100px;
   background: hsl(174, 59%, 61%);
@@ -105,7 +104,7 @@ const LinkIcons = styled.span`
   &:hover {
     border: 0.5px solid white;
     border-radius: 5px;
-    box-shadow: 1px 3px 3px 1px #ccc;
+    /* box-shadow: 1px 3px 3px 1px #ccc; */
     background-color: midnightblue;
   }
 `

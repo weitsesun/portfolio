@@ -14,6 +14,5 @@ const ProjectRenderBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: left;
-  width: 72%;
   height: 92vh;
 `

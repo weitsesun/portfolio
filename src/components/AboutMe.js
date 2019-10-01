@@ -5,10 +5,13 @@ export default function AboutMe() {
   return (
     <AboutMeGrid>
       <Header>About Me</Header>
-      <P>I’m a software engineer who is comfortable working with Javascript, 
-        preferably React and REST architecture through NodeJS, Express, MongoDB and PostgreSQL. 
-        I thrive on building high-quality systems and ensure that the architecture of the application 
-        is built with well-designed and maintainable code.</P>
+      <P>Hey, it's Wayne. I’m a Software Engineer in Bay Area. I build websites using React/Redux. 
+        And I am acknowledged to built RESTful back-end system using NodeJS and SQL/NoSQL databases. 
+        I enjoy discovering new ideas from innovative websites and talented web designers.
+        (Check <a href="https://www.awwwards.com/">here</a> for the awards of web development)</P>
+        <P>When I'm not coding, I love to travel around the world and,  
+          if there is snow on the mountain, I go snowboarding with my trusty Burton Custom X.</P>
+        <P>Go right to play with my projects➝</P>
     </AboutMeGrid>
   )
 }
@@ -24,6 +27,10 @@ const AboutMeGrid = styled.div`
   height: 100%;
   padding-left: 3em;
   box-shadow: 3px 5px 5px 3px #ccc;
+  text-align: justify; 
+  max-width: 900px;
+  min-width: 530px;
+  max-height: 700px;
 
 `
 const Header = styled.h1`
@@ -36,5 +43,5 @@ const P = styled.p`
   font-size: 18px;
   font-weight: 100;
   line-height: 1.6em;
-  width: 70%;
+  width: 80%;
 `

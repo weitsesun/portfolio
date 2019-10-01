@@ -17,7 +17,7 @@ function App() {
 const Main = styled.div`
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
   padding: 0;
   margin: 0;
   width: 100%;
