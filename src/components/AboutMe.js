@@ -13,7 +13,7 @@ export default function AboutMe() {
       <Header>About Me</Header>
       <P>Hi, my name is Wayne. I’m a Software Engineer located in Bay Area. 
         I build websites by using React/Redux. I acknowledge in building 
-        RESTful back-end system by using NodeJS and SQL/NoSQL databases. 
+        RESTful back-end system through NodeJS/Express and SQL/NoSQL databases. 
         I enjoy exploring new ideas from innovative websites and talented web designers. 
         (Check <Link href="https://www.awwwards.com/">here</Link> for the awards of web development)</P>
         <P>During my free time, I love traveling around the world especially 
