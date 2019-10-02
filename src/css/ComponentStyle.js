@@ -103,7 +103,7 @@ export const ProfilePictureBorder = styled.div`
 `
 
 export const ProfilePicture = styled.div`
-  content: url(https://wtsesun.s3.us-east-2.amazonaws.com/portfolio/profile_picture/profile_picture2.JPG);
+  content: url('../images/profile_picture.jpeg');
   width: 100%;
   object-fit: contain;
   border-radius: 50%;
