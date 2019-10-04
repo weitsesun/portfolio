@@ -1,10 +1,21 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
+  html {
+    padding: 0;
+    margin: 0;
+  }
   body {
     background-color: rgb(255, 255, 255);
-    width: 95%;
+    width: 99vw;
     height: auto;
+    @media (max-width: 1000px) {
+      background-color: black;
+    }
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
   }
 `
 
@@ -14,8 +25,13 @@ export const Main = styled.div`
   justify-content: center;
   padding: 0;
   margin: 0;
-  width: 100%;
+  width: 98vw;
   height: 95vh;
+
+  @media (max-width: 1000px) {
+    flex-wrap: wrap;
+    height: auto;
+  }
 `
 
 export const ProjectRenderBox = styled.div`
@@ -23,6 +39,9 @@ export const ProjectRenderBox = styled.div`
   align-items: center;
   justify-content: left;
   height: 92vh;
+  @media (max-width: 1000px) {
+    height: auto;
+  }
 `
 
 export const AboutMeGrid = styled.div`
@@ -40,11 +59,24 @@ export const AboutMeGrid = styled.div`
   max-width: 900px;
   min-width: 530px;
   max-height: 700px;
-
+  @media (max-width: 1000px) {
+    max-height: none;
+    max-width: none;
+    min-height: none;
+    height: auto;
+    padding: 0;
+    box-shadow: none;
+    width: 100vw;
+    align-items: center;
+  }
 `
 export const Header = styled.h1`
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  @media (max-width: 1000px) {
+    font-size: 2.2rem;
+    margin: 2%;
+  }
 `
 
 export const P = styled.p`
@@ -53,6 +85,12 @@ export const P = styled.p`
   font-weight: 100;
   line-height: 1.6em;
   width: 90%;
+  @media (max-width: 1000px) {
+    font-size: 1.5rem;
+    margin: 2%;
+    height: 100%;
+    width: 90%;
+  }
 `
 
 export const Link = styled.a`
@@ -63,9 +101,12 @@ export const Link = styled.a`
   }
 `
 
-
 export const ProfileBox = styled.div`
   padding-top: 5%;
+  @media (max-width: 1000px) {
+    padding-top: 0;
+    height: auto;
+  }
 `
 export const UpperLeftBox = styled.div`
   display: block;
@@ -73,6 +114,11 @@ export const UpperLeftBox = styled.div`
   padding-top: 100px;
   background: hsl(174, 59%, 61%);
   box-shadow: 3px 5px 5px 3px #ccc;
+  @media (max-width: 1000px) {
+    width: 100vw;
+    padding-top: 0;
+    height: 100px;
+  }
 `
 
 export const ProfileGrid = styled.div`
@@ -93,6 +139,14 @@ export const ProfileGrid = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: 3px 5px 5px 3px #ccc;
+  @media (max-width: 1000px) {
+    top: 0px;
+    height: 100%;
+    left: 0;
+    padding: 10% 5%;
+    max-width: 100%;
+    box-shadow: none;
+  }
 `
 
 export const ProfilePictureBorder = styled.div`
@@ -100,6 +154,9 @@ export const ProfilePictureBorder = styled.div`
   padding-top: 0%;
   border: 3px white solid;
   border-radius: 50%;
+  @media (max-width: 1000px) {
+    width: 40%;
+  }
 `
 
 export const ProfilePicture = styled.div`
@@ -115,12 +172,18 @@ export const Name = styled.div`
   color: white;
   padding: 10px;
   text-align: center;
+  @media (max-width: 1000px) {
+    font-size: 3rem;
+  }
 `
 
 export const IconBox = styled.div`
   display: flex;
   justify-content: space-around;
   width: 50%;
+  @media (max-width: 1000px) {
+    width: 50%;
+  }
 `
 
 export const LinkIcons = styled.span`
@@ -136,7 +199,10 @@ export const LinkIcons = styled.span`
   &:hover {
     border: 0.5px solid white;
     border-radius: 5px;
-    /* box-shadow: 1px 3px 3px 1px #ccc; */
     background-color: midnightblue;
+  }
+  @media (max-width: 1000px) {
+    height: 5rem;
+    width: 5rem;
   }
 `
