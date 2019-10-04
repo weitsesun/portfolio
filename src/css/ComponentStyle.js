@@ -9,9 +9,6 @@ export const GlobalStyle = createGlobalStyle`
     background-color: rgb(255, 255, 255);
     width: 99vw;
     height: auto;
-    @media (max-width: 1000px) {
-      background-color: black;
-    }
   }
 
   *, *::before, *::after {
