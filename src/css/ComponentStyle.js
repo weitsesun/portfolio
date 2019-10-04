@@ -29,7 +29,6 @@ export const Main = styled.div`
     flex-wrap: wrap;
     height: auto;
     width: 100vw;
-    height: 100vh;
   }
 `
 
