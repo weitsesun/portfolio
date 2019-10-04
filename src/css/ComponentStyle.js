@@ -28,6 +28,8 @@ export const Main = styled.div`
   @media (max-width: 1000px) {
     flex-wrap: wrap;
     height: auto;
+    width: 100vw;
+    height: 100vh;
   }
 `
 
