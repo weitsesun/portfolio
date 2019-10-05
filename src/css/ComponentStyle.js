@@ -60,7 +60,6 @@ export const AboutMeGrid = styled.div`
     max-height: none;
     max-width: none;
     min-height: none;
-    height: auto;
     padding: 0;
     box-shadow: none;
     width: 100vw;
