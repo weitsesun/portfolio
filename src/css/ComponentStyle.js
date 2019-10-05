@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     background-color: rgb(255, 255, 255);
-    width: 99vw;
+    width: 98vw;
     height: auto;
   }
 
@@ -27,8 +27,6 @@ export const Main = styled.div`
 
   @media (max-width: 1000px) {
     flex-wrap: wrap;
-    height: auto;
-    width: 100vw;
   }
 `
 
@@ -116,6 +114,7 @@ export const UpperLeftBox = styled.div`
     width: 100vw;
     padding-top: 0;
     height: 100px;
+    box-shadow: none;
   }
 `
 
