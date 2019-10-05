@@ -86,7 +86,7 @@ export const P = styled.p`
     font-size: 1.8rem;
     margin: 2%;
     height: 100%;
-    width: 90%;
+    width: 85%;
   }
 `
 
