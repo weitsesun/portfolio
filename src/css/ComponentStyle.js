@@ -84,7 +84,6 @@ export const P = styled.p`
   width: 90%;
   @media (max-width: 1000px) {
     font-size: 1.8rem;
-    margin: 2%;
     height: 100%;
     width: 85%;
   }
