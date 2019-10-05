@@ -83,7 +83,7 @@ export const P = styled.p`
   line-height: 1.6em;
   width: 90%;
   @media (max-width: 1000px) {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin: 2%;
     height: 100%;
     width: 90%;
