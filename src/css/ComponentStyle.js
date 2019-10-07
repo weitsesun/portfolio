@@ -91,6 +91,9 @@ export const P = styled.p`
 export const Link = styled.a`
   color: cyan;
   text-decoration: none;
+  &:hover {
+    background-color: midnightblue;
+  }
   &:visited {
     color: lightblue;
   }
@@ -184,8 +187,8 @@ export const IconBox = styled.div`
 
 export const LinkIcons = styled.span`
   content: url(${props => props.icon});
-  height: 35px;
-  width: 35px;
+  height: 3.5rem;
+  width: 3.5rem;
   padding: 10px;
   margin: 0;
   cursor: pointer;
