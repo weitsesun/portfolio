@@ -21,7 +21,7 @@ export default function AboutMe() {
         <P>Check my projects➝ 
           <Link href="https://www.github.com/weitsesun">Github</Link>
           <br/>
-          And my team projects➝ 
+          Team projects➝ 
           <Link href="https://github.com/opensource-table">Open Source Table</Link>
           ,&nbsp;
           <Link href="https://github.com/hacker-home">Hacker Home</Link>
