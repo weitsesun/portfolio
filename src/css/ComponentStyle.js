@@ -18,12 +18,14 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Main = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
+  flex-direction: column;
   padding: 0;
   margin: 0;
   width: 98vw;
-  height: 95vh;
+  /* height: 95vh; */
+  height: 100%;
 
   @media (max-width: 1000px) {
     flex-wrap: wrap;
@@ -35,7 +37,8 @@ export const ProjectRenderBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: left;
-  height: 92vh;
+  /* height: 92vh; */
+  height: auto;
   @media (max-width: 1000px) {
     height: auto;
   }
@@ -45,17 +48,19 @@ export const AboutMeGrid = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: coral;
   color: white;
   letter-spacing: 0.1em;
   width: 100%;
   height: 100%;
-  padding-left: 3em;
-  box-shadow: 3px 5px 5px 3px #ccc;
+  /* padding-left: 3em; */
+  /* box-shadow: 3px 5px 5px 3px #ccc; */
   text-align: justify; 
-  max-width: 900px;
+  /* max-width: 900px;
   min-width: 530px;
-  max-height: 700px;
+  max-height: 700px; */
+  padding: 0;
   @media (max-width: 1000px) {
     max-height: none;
     max-width: none;
@@ -69,6 +74,8 @@ export const AboutMeGrid = styled.div`
 export const Header = styled.h1`
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  font-size: 2.2rem;
+  margin: 2%;
   @media (max-width: 1000px) {
     font-size: 2.2rem;
     margin: 2%;
@@ -77,10 +84,13 @@ export const Header = styled.h1`
 
 export const P = styled.p`
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  /* font-size: 18px; */
   font-weight: 100;
   line-height: 1.6em;
-  width: 90%;
+  /* width: 90%; */
+  font-size: 1.5rem;
+  height: 100%;
+  width: 65%;
   @media (max-width: 1000px) {
     font-size: 1.8rem;
     height: 100%;
@@ -100,7 +110,9 @@ export const Link = styled.a`
 `
 
 export const ProfileBox = styled.div`
-  padding-top: 5%;
+  /* padding-top: 5%; */
+  padding-top: 0;
+  height: auto;
   @media (max-width: 1000px) {
     padding-top: 0;
     height: auto;
@@ -108,10 +120,9 @@ export const ProfileBox = styled.div`
 `
 export const UpperLeftBox = styled.div`
   display: block;
-  width: 100px;
-  padding-top: 100px;
+  width: 100%;
+  padding-top: 4rem;
   background: hsl(174, 59%, 61%);
-  box-shadow: 3px 5px 5px 3px #ccc;
   @media (max-width: 1000px) {
     width: 100vw;
     padding-top: 0;
@@ -125,10 +136,8 @@ export const ProfileGrid = styled.div`
   padding: 0;
   margin: 0;
   position: relative;
-  top: -75px;
-  left: 25px;
   width: 100%;
-  max-width: 350px;
+  max-width: auto;
   min-width: 250px;
   height: 95%;
   min-height: 530px;
@@ -137,7 +146,7 @@ export const ProfileGrid = styled.div`
   justify-content: center;
   display: flex;
   flex-direction: column;
-  box-shadow: 3px 5px 5px 3px #ccc;
+  /* box-shadow: 3px 5px 5px 3px #ccc; */
   @media (max-width: 1000px) {
     top: 0px;
     height: 100%;
@@ -149,7 +158,8 @@ export const ProfileGrid = styled.div`
 `
 
 export const ProfilePictureBorder = styled.div`
-  width: 60%;
+  width: 30%;
+  max-width: 300px;
   padding-top: 0%;
   border: 3px white solid;
   border-radius: 50%;
@@ -180,6 +190,7 @@ export const IconBox = styled.div`
   display: flex;
   justify-content: space-around;
   width: 50%;
+  max-width: 300px;
   @media (max-width: 1000px) {
     width: 50%;
   }
@@ -187,8 +198,8 @@ export const IconBox = styled.div`
 
 export const LinkIcons = styled.span`
   content: url(${props => props.icon});
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 4rem;
+  width: 4rem;
   padding: 10px;
   margin: 0;
   cursor: pointer;
