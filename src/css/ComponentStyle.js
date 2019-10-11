@@ -4,11 +4,14 @@ export const GlobalStyle = createGlobalStyle`
   html {
     padding: 0;
     margin: 0;
+    width: 100%;
   }
   body {
     background-color: rgb(255, 255, 255);
-    width: 98vw;
+    width: 100%;
     height: auto;
+    padding:0;
+    margin: 0;
   }
 
   *, *::before, *::after {
@@ -23,7 +26,7 @@ export const Main = styled.div`
   flex-direction: column;
   padding: 0;
   margin: 0;
-  width: 98vw;
+  width: 100%;
   /* height: 95vh; */
   height: 100%;
 
