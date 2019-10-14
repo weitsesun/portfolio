@@ -21,13 +21,10 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Main = styled.div`
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
   flex-direction: column;
   padding: 0;
   margin: 0;
   width: 100%;
-  /* height: 95vh; */
   height: 100%;
 
   @media (max-width: 1000px) {
@@ -40,7 +37,6 @@ export const ProjectRenderBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: left;
-  /* height: 92vh; */
   height: auto;
   @media (max-width: 1000px) {
     height: auto;
@@ -57,12 +53,7 @@ export const AboutMeGrid = styled.div`
   letter-spacing: 0.1em;
   width: 100%;
   height: 100%;
-  /* padding-left: 3em; */
-  /* box-shadow: 3px 5px 5px 3px #ccc; */
   text-align: justify; 
-  /* max-width: 900px;
-  min-width: 530px;
-  max-height: 700px; */
   padding: 0;
   @media (max-width: 1000px) {
     max-height: none;
@@ -87,10 +78,8 @@ export const Header = styled.h1`
 
 export const P = styled.p`
   font-family: 'Roboto', sans-serif;
-  /* font-size: 18px; */
   font-weight: 100;
   line-height: 1.6em;
-  /* width: 90%; */
   font-size: 1.5rem;
   height: 100%;
   width: 65%;
@@ -113,7 +102,6 @@ export const Link = styled.a`
 `
 
 export const ProfileBox = styled.div`
-  /* padding-top: 5%; */
   padding-top: 0;
   height: auto;
   @media (max-width: 1000px) {
@@ -149,7 +137,6 @@ export const ProfileGrid = styled.div`
   justify-content: center;
   display: flex;
   flex-direction: column;
-  /* box-shadow: 3px 5px 5px 3px #ccc; */
   @media (max-width: 1000px) {
     top: 0px;
     height: 100%;
