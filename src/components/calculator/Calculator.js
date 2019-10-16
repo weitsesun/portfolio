@@ -6,9 +6,15 @@ export default function Calculator() {
   const [curDisplay, setCurDisplay] = useState('')
   const [curOperator, setCurOperator] = useState(null);
 
-  const handleNnumberClick = function(num) {
+  const handleNumberClick = function(num) {
+    if(num === '.') {
+      if(curDisplay.includes('.')) return;
+      if(curDisplay.length === 0) {
+        num = '0.';
+      }
+    }
     setCurDisplay(prev => {
-      return Number(prev.toString() + num.toString());
+      return prev.toString() + num.toString();
     })
   }
 
@@ -23,15 +29,17 @@ export default function Calculator() {
     if(res !== undefined) {
       setPreDisplay('');
       setCurOperator(null);
-      setCurDisplay(res);
+      setCurDisplay(res.toString());
     }
   }
 
   const handleOperatorClick = function(operator) {
+    if(curDisplay.length === 0) return;
     if(preDisplay.length !== 0 
       && curDisplay.length !== 0 
       && curOperator) {
         setPreDisplay(calculate().toString());
+        setCurOperator(operator);
         setCurDisplay('')
       }
     else {
@@ -50,16 +58,16 @@ export default function Calculator() {
     let res = 0;
     switch(curOperator) {
       case '+':
-        res = Number(preDisplay) + Number(curDisplay);
+        res = parseFloat(preDisplay) + parseFloat(curDisplay);
         break;
       case '-':
-          res = Number(preDisplay) - Number(curDisplay);
+          res = parseFloat(preDisplay) - parseFloat(curDisplay);
           break;
       case '×':
-        res = Number(preDisplay) * Number(curDisplay);
+        res = parseFloat(preDisplay) * parseFloat(curDisplay);
         break;
       case '÷':
-        res = Number(preDisplay) / Number(curDisplay);
+        res = parseFloat(preDisplay) / parseFloat(curDisplay);
         break;
       default:
         break;
@@ -67,27 +75,37 @@ export default function Calculator() {
     return res;
   }
 
+  const handleDelClick = function() {
+    if(curDisplay.length > 0) {
+      setCurDisplay(prev => {
+        return prev.slice(0, prev.length - 1);
+      })
+    } else {
+      return;
+    }
+  }
+
   return (
     <CalculatorContainer>
       <PreviousCalculation>{`${preDisplay} ${curOperator ? curOperator : ''}`}</PreviousCalculation>
       <CurrentCalculation>{ curDisplay }</CurrentCalculation>
       <ACButton onClick={ () => handleACClick() }>AC</ACButton>
-      <OperationButton del="true">DEL</OperationButton>
+      <OperationButton del="true" onClick={() => handleDelClick()}>DEL</OperationButton>
       <OperationButton onClick={(e) => handleOperatorClick(e.target.innerHTML)}>÷</OperationButton>
-      <NumberButton onClick={(e) => handleNnumberClick(e.target.innerHTML)}>7</NumberButton>
-      <NumberButton onClick={(e) => handleNnumberClick(e.target.innerHTML)}>8</NumberButton>
-      <NumberButton onClick={(e) => handleNnumberClick(e.target.innerHTML)}>9</NumberButton>
+      <NumberButton onClick={(e) => handleNumberClick(e.target.innerHTML)}>7</NumberButton>
+      <NumberButton onClick={(e) => handleNumberClick(e.target.innerHTML)}>8</NumberButton>
+      <NumberButton onClick={(e) => handleNumberClick(e.target.innerHTML)}>9</NumberButton>
       <OperationButton onClick={(e) => handleOperatorClick(e.target.innerHTML)}>×</OperationButton>
-      <NumberButton onClick={(e) => handleNnumberClick(e.target.innerHTML)}>4</NumberButton>
-      <NumberButton onClick={(e) => handleNnumberClick(e.target.innerHTML)}>5</NumberButton>
-      <NumberButton onClick={(e) => handleNnumberClick(e.target.innerHTML)}>6</NumberButton>
+      <NumberButton onClick={(e) => handleNumberClick(e.target.innerHTML)}>4</NumberButton>
+      <NumberButton onClick={(e) => handleNumberClick(e.target.innerHTML)}>5</NumberButton>
+      <NumberButton onClick={(e) => handleNumberClick(e.target.innerHTML)}>6</NumberButton>
       <OperationButton onClick={(e) => handleOperatorClick(e.target.innerHTML)}>-</OperationButton>
-      <NumberButton onClick={(e) => handleNnumberClick(e.target.innerHTML)}>1</NumberButton>
-      <NumberButton onClick={(e) => handleNnumberClick(e.target.innerHTML)}>2</NumberButton>
-      <NumberButton onClick={(e) => handleNnumberClick(e.target.innerHTML)}>3</NumberButton>
+      <NumberButton onClick={(e) => handleNumberClick(e.target.innerHTML)}>1</NumberButton>
+      <NumberButton onClick={(e) => handleNumberClick(e.target.innerHTML)}>2</NumberButton>
+      <NumberButton onClick={(e) => handleNumberClick(e.target.innerHTML)}>3</NumberButton>
       <OperationButton onClick={(e) => handleOperatorClick(e.target.innerHTML)}>+</OperationButton>
-      <NumberButton>.</NumberButton>
-      <NumberButton onClick={(e) => handleNnumberClick(e.target.innerHTML)}>0</NumberButton>
+      <NumberButton onClick={(e) => handleNumberClick(e.target.innerHTML)}>.</NumberButton>
+      <NumberButton onClick={(e) => handleNumberClick(e.target.innerHTML)}>0</NumberButton>
       <EqualButton onClick={() => handleEqualClick()}>=</EqualButton>
     </CalculatorContainer>
   )
@@ -97,12 +115,13 @@ const CalculatorContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 5rem);
   grid-auto-rows: 5rem;
-  grid-template-rows: 3rem 4rem;
+  grid-template-rows: minmax(3rem, auto) minmax(4rem, auto);
   grid-gap: 1px black;
-  margin: 2rem;
   padding: 0;
+  margin: 0;
   width: fit-content;
   border: 1px solid white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 `
 
 const PreviousCalculation = styled.div`
@@ -125,6 +144,8 @@ const CurrentCalculation = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  word-wrap: break-word;
+  word-break: break-all;
 `
 
 const NumberButton = styled.button`
