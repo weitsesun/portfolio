@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { 
   CalculatorContainer,
   PreviousCalculation,
@@ -13,6 +13,13 @@ export default function Calculator() {
   const [preDisplay, setPreDisplay] = useState('')
   const [curDisplay, setCurDisplay] = useState('')
   const [curOperator, setCurOperator] = useState(null);
+  const [realPreDisplay, setRealPreDisplay] = useState('');
+  const [realCurDisplay, setRealCurDisplay] = useState('');
+
+  useEffect(() => {
+    setRealPreDisplay(displayLocalString(preDisplay));
+    setRealCurDisplay(displayLocalString(curDisplay));
+  },[preDisplay, curDisplay])
 
   const handleNumberClick = function(num) {
     if(num === '.') {
@@ -92,10 +99,20 @@ export default function Calculator() {
     }
   }
 
+  const displayLocalString = function(numStr) {
+    let numAry = numStr.split('.');
+    let intDig = parseFloat(numAry[0]);
+    let decDig = numAry[1];
+    if(isNaN(intDig)) return '';
+    intDig = intDig.toLocaleString('en', {maximumFractionDigits: 0});
+
+    return decDig ? `${intDig}.${decDig}` : numStr.includes('.') ? `${intDig}.` : `${intDig}`;
+  }
+
   return (
     <CalculatorContainer>
-      <PreviousCalculation>{`${preDisplay} ${curOperator ? curOperator : ''}`}</PreviousCalculation>
-      <CurrentCalculation>{ curDisplay }</CurrentCalculation>
+      <PreviousCalculation>{`${realPreDisplay} ${curOperator ? curOperator : ''}`}</PreviousCalculation>
+      <CurrentCalculation>{ realCurDisplay }</CurrentCalculation>
       <ACButton onClick={ () => handleACClick() }>AC</ACButton>
       <OperationButton del="true" onClick={() => handleDelClick()}>DEL</OperationButton>
       <OperationButton onClick={(e) => handleOperatorClick(e.target.innerHTML)}>÷</OperationButton>
