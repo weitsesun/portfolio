@@ -1,5 +1,13 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import { 
+  CalculatorContainer,
+  PreviousCalculation,
+  CurrentCalculation,
+  EqualButton,
+  ACButton,
+  OperationButton,
+  NumberButton,
+ } from '../../css/CalculatorStyle'
 
 export default function Calculator() {
   const [preDisplay, setPreDisplay] = useState('')
@@ -118,100 +126,7 @@ export default function Calculator() {
   )
 }
 
-const CalculatorContainer = styled.div`
-  font-family: Arial, Helvetica, sans-serif;
-  display: grid;
-  grid-template-columns: repeat(4, 5rem);
-  grid-auto-rows: 5rem;
-  grid-template-rows: minmax(3rem, auto) minmax(4rem, auto);
-  grid-gap: 1px black;
-  padding: 0;
-  margin: 0;
-  width: fit-content;
-  border: 1px solid white;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  height: fit-content;
-  border-radius: 5px;
-`
 
-const PreviousCalculation = styled.div`
-  font-size: 1.5rem;
-  grid-column: span 4;
-  color: rgba(255, 255, 255, 0.5);
-  background-color: rgb(47, 47, 47);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 5px;
-  border-radius: 5px 5px 0 0;
 
-`
 
-const CurrentCalculation = styled.div`
-  font-size: 3rem;
-  padding-right: 5px;
-  color: rgba(255, 255, 255, 0.9);
-  grid-column: span 4;
-  background-color: rgb(47, 47, 47);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  word-wrap: break-word;
-  word-break: break-all;
-`
 
-const NumberButton = styled.button`
-  font-size: 2rem;
-  background-color: rgba(80, 200, 250, 0.9);
-  color: white;
-  outline: none;
-  cursor: pointer;
-  &:hover {
-    background-color: rgba(80, 200, 250, 0.5);
-  }
-`
-
-const OperationButton = styled.button`
-  font-size: 2rem;
-  color: white;
-  outline: none;
-  cursor: pointer;
-  background-color: 
-  ${
-    props => props.del ? 
-      "rgba(250, 80, 80, 0.9)"
-    : "rgba(245, 200, 90, 0.9)"
-  };
-  &:hover {
-    background-color: 
-  ${
-    props => props.del ? 
-      "rgba(250, 80, 80, 0.5)"
-    : "rgba(245, 200, 90, 0.5)"
-  };
-  }
-`
-
-const ACButton = styled.button`
-  grid-column: span 2;
-  font-size: 2rem;
-  outline: none;
-  color: white;
-  cursor: pointer;
-  background-color: rgba(250, 80, 80, 0.9);
-  &:hover {
-    background-color: rgba(250, 80, 80, 0.5);
-  }
-`
-
-const EqualButton = styled.button`
-  grid-column: span 2;
-  font-size: 2rem;
-  outline: none;
-  color: white;
-  cursor: pointer;
-  background-color: rgba(245, 200, 90, 0.9);
-  &:hover {
-    background-color: rgba(245, 200, 90, 0.5);
-  }
-`

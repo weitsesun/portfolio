@@ -1,6 +1,7 @@
 import React from 'react'
 import { Header, P } from '../../css/ComponentStyle'
-import styled from 'styled-components'
+import { AboutCalculatorContainer } from '../../css/CalculatorStyle'
+
 
 export default function AboutCalculator() {
   return (
@@ -8,6 +9,7 @@ export default function AboutCalculator() {
       <Header 
         shadow="true"
         w="400px"
+        fontStyle='italic'
       >Mini Calculator
       </Header>
       <P w='400px'>
@@ -24,20 +26,10 @@ export default function AboutCalculator() {
         </b>
         <br/>
         Just a simple ReactJS project to play with the React Hooks.
+        <br/>
+        <br/>
+        ⟵ Play with it
       </P>
     </AboutCalculatorContainer>
   )
 }
-
-const AboutCalculatorContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: transparent;
-  height: fit-content;
-  color: white;
-  padding: 2rem;
-  min-height: 530px;
-  width: fit-content;
-  border-radius: 20px;
-  font-style: italic;
-`
