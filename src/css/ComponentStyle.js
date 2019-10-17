@@ -143,7 +143,7 @@ export const ProfileGrid = styled.div`
   min-width: 250px;
   height: 100%;
   min-height: 530px;
-  background: rgba(150, 30, 30, 1);
+  background: rgba(86, 106, 255, 1);
   align-items: center;
   justify-content: center;
   display: flex;

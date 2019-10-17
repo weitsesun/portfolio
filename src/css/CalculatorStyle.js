@@ -18,13 +18,15 @@ export const PageCalculatorContainer = styled.div`
 export const CalculatorContainer = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
-  grid-template-columns: repeat(4, 5rem);
-  grid-auto-rows: 5rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 5.5rem;
   grid-template-rows: minmax(3rem, auto) minmax(4rem, auto);
   grid-gap: 1px black;
   padding: 0;
   margin: 0;
-  width: fit-content;
+  width: 30%;
+  min-width: 340px;
+  max-width: 420px;
   border: 1px solid white;
   box-shadow: 15px 15px rgba(0, 0, 0, 0.2);
   height: fit-content;
