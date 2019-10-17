@@ -52,7 +52,7 @@ export const AboutMeGrid = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(65, 64, 171, 1);
+  background-color: rgba(255, 125, 0, 1);
   color: white;
   letter-spacing: 0.1em;
   width: 100%;
@@ -143,7 +143,7 @@ export const ProfileGrid = styled.div`
   min-width: 250px;
   height: 100%;
   min-height: 530px;
-  background: rgba(86, 106, 255, 1);
+  background: rgba(0, 180, 255, 1);
   align-items: center;
   justify-content: center;
   display: flex;
