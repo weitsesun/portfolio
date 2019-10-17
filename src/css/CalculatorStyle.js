@@ -40,7 +40,7 @@ export const PreviousCalculation = styled.div`
 `
 
 export const CurrentCalculation = styled.div`
-  font-size: 3rem;
+  font-size: 2.6rem;
   padding-right: 5px;
   color: rgba(255, 255, 255, 0.9);
   grid-column: span 4;
