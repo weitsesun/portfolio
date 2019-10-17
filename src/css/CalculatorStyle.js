@@ -31,6 +31,10 @@ export const CalculatorContainer = styled.div`
   box-shadow: 15px 15px rgba(0, 0, 0, 0.2);
   height: fit-content;
   border-radius: 5px;
+  @media (max-width: 1000px) {
+    scroll-snap-align: none;
+    width: 50%;
+  }
 `
 
 export const PreviousCalculation = styled.div`
