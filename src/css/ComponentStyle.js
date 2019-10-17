@@ -52,7 +52,7 @@ export const AboutMeGrid = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(65, 64, 171, 1);
   color: white;
   letter-spacing: 0.1em;
   width: 100%;
