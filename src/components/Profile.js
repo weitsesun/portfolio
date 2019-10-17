@@ -17,7 +17,6 @@ import {
 export default function Profile() {
   return (
     <ProfileBox>
-      <UpperLeftBox />
       <ProfileGrid className="profile-picture">
         <ProfilePictureBorder>
           <ProfilePicture />
