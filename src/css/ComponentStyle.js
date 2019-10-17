@@ -99,10 +99,11 @@ export const P = styled.p`
 `
 
 export const Link = styled.a`
-  color: cyan;
+  color: rgb(139, 195, 74, 1);
   text-decoration: none;
+  cursor: pointer;
   &:hover {
-    background-color: rgba(150, 200, 30, 1);
+    background-color: rgba(150, 200, 30, .4);
   }
   &:visited {
     color: rgba(150, 200, 30, .3);

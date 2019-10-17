@@ -5,7 +5,6 @@ import resumeIcon from '../images/resume-icon.png'
 
 import {
   ProfileBox,
-  UpperLeftBox,
   ProfileGrid,
   ProfilePictureBorder,
   ProfilePicture,
