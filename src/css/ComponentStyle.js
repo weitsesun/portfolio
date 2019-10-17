@@ -21,14 +21,16 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const Main = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 30% 70%;
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   scroll-snap-align: start;
+  scroll-behavior: smooth;
   @media (max-width: 1000px) {
+    display:flex;
     flex-wrap: wrap;
     height: 100%;
     scroll-snap-align: none;
@@ -50,13 +52,13 @@ export const AboutMeGrid = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: coral;
+  background-color: rgba(0, 0, 0, 1);
   color: white;
   letter-spacing: 0.1em;
   width: 100%;
   height: 100%;
   text-align: justify; 
-  padding: 0;
+  padding: 5% 0;
   scroll-snap-align: center;
   @media (max-width: 1000px) {
     max-height: none;
@@ -99,27 +101,29 @@ export const Link = styled.a`
   color: cyan;
   text-decoration: none;
   &:hover {
-    background-color: midnightblue;
+    background-color: rgba(150, 200, 30, 1);
   }
   &:visited {
-    color: lightblue;
+    color: rgba(150, 200, 30, .3);
   }
 `
 
 export const ProfileBox = styled.div`
   padding-top: 0;
-  height: auto;
+  height: 100%;
+  min-width: 30%;
   @media (max-width: 1000px) {
     padding-top: 0;
+    width: 100%;
     height: auto;
   }
 `
 export const UpperLeftBox = styled.div`
-  display: block;
+  grid-column: span 2;
   width: 100%;
-  padding-top: 4rem;
-  background: hsl(174, 59%, 61%);
+  background: rgba(0,0,0,1);
   @media (max-width: 1000px) {
+    display: none;
     width: 100vw;
     padding-top: 0;
     height: 100px;
@@ -135,9 +139,9 @@ export const ProfileGrid = styled.div`
   width: 100%;
   max-width: auto;
   min-width: 250px;
-  height: 95%;
+  height: 100%;
   min-height: 530px;
-  background: hsl(200, 100%, 50%);
+  background: rgba(150, 30, 30, 1);
   align-items: center;
   justify-content: center;
   display: flex;
@@ -153,7 +157,7 @@ export const ProfileGrid = styled.div`
 `
 
 export const ProfilePictureBorder = styled.div`
-  width: 30%;
+  width: 60%;
   max-width: 300px;
   padding-top: 0%;
   border: 3px white solid;
@@ -173,6 +177,8 @@ export const ProfilePicture = styled.div`
 
 export const Name = styled.div`
   font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
   color: white;
   padding: 10px;
   text-align: center;
@@ -198,13 +204,11 @@ export const LinkIcons = styled.span`
   padding: 10px;
   margin: 0;
   cursor: pointer;
-  transition: 0.1s;
-  border: 0.5px solid transparent;
+  transition: 0.3s;
 
   &:hover {
-    border: 0.5px solid white;
     border-radius: 5px;
-    background-color: midnightblue;
+    background-color: rgba(0, 0, 0, 1);
   }
   @media (max-width: 1000px) {
     height: 5rem;

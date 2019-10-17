@@ -7,7 +7,7 @@ export const PageCalculatorContainer = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: rgba(170, 90, 240, .8);
+  background-color: rgba(15, 30, 30, .8);
   flex-wrap: wrap;
   padding: 2rem;
   scroll-snap-align: center;
