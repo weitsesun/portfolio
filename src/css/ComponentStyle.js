@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     height: auto;
     padding:0;
     margin: 0;
+    scroll-snap-type: y mandatory;
   }
 
   *, *::before, *::after {
@@ -26,10 +27,11 @@ export const Main = styled.div`
   margin: 0;
   width: 100%;
   height: 100%;
-
+  scroll-snap-align: start;
   @media (max-width: 1000px) {
     flex-wrap: wrap;
     height: 100%;
+    scroll-snap-align: none;
   }
 `
 
@@ -55,6 +57,7 @@ export const AboutMeGrid = styled.div`
   height: 100%;
   text-align: justify; 
   padding: 0;
+  scroll-snap-align: center;
   @media (max-width: 1000px) {
     max-height: none;
     max-width: none;
@@ -63,6 +66,7 @@ export const AboutMeGrid = styled.div`
     box-shadow: none;
     width: 100vw;
     align-items: center;
+    scroll-snap-align: none;
   }
 `
 export const Header = styled.h1`

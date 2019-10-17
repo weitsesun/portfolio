@@ -7,9 +7,13 @@ export const PageCalculatorContainer = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: rgba(84, 80, 150, 1);
+  background-color: rgba(170, 90, 240, .8);
   flex-wrap: wrap;
   padding: 2rem;
+  scroll-snap-align: center;
+  @media (max-width: 1000px) {
+    scroll-snap-align: none;
+  }
 `
 export const CalculatorContainer = styled.div`
   font-family: Arial, Helvetica, sans-serif;
