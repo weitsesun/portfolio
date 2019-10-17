@@ -1,7 +1,7 @@
 import React from 'react'
 import Profile from './Profile'
 import ProjectRender from './ProjectRender'
-import Calculator from './calculator/Calculator'
+import PageCalculator from './calculator/PageCalculator'
 import { GlobalStyle, Main } from '../css/ComponentStyle'
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <Profile />
         <ProjectRender />
       </Main>
-      <Calculator />
+      <PageCalculator />
     </>
   );
 }

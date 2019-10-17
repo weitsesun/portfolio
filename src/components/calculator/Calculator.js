@@ -34,7 +34,6 @@ export default function Calculator() {
   }
 
   const handleOperatorClick = function(operator) {
-    if(curDisplay.length === 0) return;
     if(preDisplay.length !== 0 
       && curDisplay.length !== 0 
       && curOperator) {
@@ -104,14 +103,23 @@ export default function Calculator() {
       <NumberButton onClick={(e) => handleNumberClick(e.target.innerHTML)}>2</NumberButton>
       <NumberButton onClick={(e) => handleNumberClick(e.target.innerHTML)}>3</NumberButton>
       <OperationButton onClick={(e) => handleOperatorClick(e.target.innerHTML)}>+</OperationButton>
-      <NumberButton onClick={(e) => handleNumberClick(e.target.innerHTML)}>.</NumberButton>
+      <NumberButton 
+        onClick={(e) => handleNumberClick(e.target.innerHTML)}
+        style={{"border-radius": '0 0 0 5px'}}
+      >.
+      </NumberButton>
       <NumberButton onClick={(e) => handleNumberClick(e.target.innerHTML)}>0</NumberButton>
-      <EqualButton onClick={() => handleEqualClick()}>=</EqualButton>
+      <EqualButton 
+        onClick={() => handleEqualClick()}
+        style={{"border-radius": '0 0 5px 0'}}
+      >=
+      </EqualButton>
     </CalculatorContainer>
   )
 }
 
 const CalculatorContainer = styled.div`
+  font-family: Arial, Helvetica, sans-serif;
   display: grid;
   grid-template-columns: repeat(4, 5rem);
   grid-auto-rows: 5rem;
@@ -122,10 +130,12 @@ const CalculatorContainer = styled.div`
   width: fit-content;
   border: 1px solid white;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  height: fit-content;
+  border-radius: 5px;
 `
 
 const PreviousCalculation = styled.div`
-  font-size: 2rem;
+  font-size: 1.5rem;
   grid-column: span 4;
   color: rgba(255, 255, 255, 0.5);
   background-color: rgb(47, 47, 47);
@@ -133,6 +143,8 @@ const PreviousCalculation = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding-right: 5px;
+  border-radius: 5px 5px 0 0;
+
 `
 
 const CurrentCalculation = styled.div`

@@ -69,10 +69,10 @@ export const Header = styled.h1`
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 2.2rem;
-  margin: 2%;
+  width: ${props => props.w ? props.w : 'auto'};
+  text-shadow: ${props => props.shadow? '13px 13px rgba(0,0,0,.3)':'none'};
   @media (max-width: 1000px) {
     font-size: 2.2rem;
-    margin: 2%;
   }
 `
 
@@ -82,7 +82,7 @@ export const P = styled.p`
   line-height: 1.6em;
   font-size: 1.5rem;
   height: 100%;
-  width: 65%;
+  width: ${props => props.w ? props.w : '65%'};
   @media (max-width: 1000px) {
     font-size: 1.8rem;
     height: 100%;
