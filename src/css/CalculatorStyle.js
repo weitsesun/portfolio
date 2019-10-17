@@ -122,8 +122,14 @@ export const AboutCalculatorContainer = styled.div`
   background-color: transparent;
   height: fit-content;
   color: white;
-  padding: 2rem;
+  padding-left: 5%;
   min-height: 530px;
   width: fit-content;
   border-radius: 20px;
+  @media (max-width: 1000px) {
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+  }
 `

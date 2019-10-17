@@ -12,7 +12,7 @@ export default function AboutCalculator() {
         fontStyle='italic'
       >Mini Calculator
       </Header>
-      <P w='400px'>
+      <P w='330px'>
         <b>
           Tech Stack:
         </b>
@@ -20,15 +20,15 @@ export default function AboutCalculator() {
         ReactJS<br/>
         Styled Component
       </P>
-      <P w='400px'>
+      <P w='330px'>
         <b>
           Note: 
         </b>
         <br/>
         Just a simple ReactJS project to play with the React Hooks.
-        <br/>
-        <br/>
-        ⟵ Play with it
+      </P>
+      <P w='330px' mobileView>
+      ⟵ Play with it
       </P>
     </AboutCalculatorContainer>
   )

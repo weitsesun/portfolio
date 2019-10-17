@@ -66,7 +66,7 @@ export const AboutMeGrid = styled.div`
     min-height: none;
     padding: 0;
     box-shadow: none;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     scroll-snap-align: none;
   }
@@ -94,6 +94,7 @@ export const P = styled.p`
     font-size: 1.8rem;
     height: 100%;
     width: 85%;
+    display: ${p => p.mobileView ? 'none' : 'normal'};
   }
 `
 
