@@ -17,7 +17,7 @@ export default function AboutMe() {
         I enjoy exploring new ideas from innovative websites and talented web designers. 
         (Check <Link onClick={(e) => {
                   e.preventDefault();
-                  window.open("https://www.github.com/weitsesun")}}
+                  window.open("https://www.awwwards.com/")}}
               >here</Link> for the awards of web development)</P>
         <P>During my free time, I love traveling around the world especially 
           when it snows, I go snowboarding with my trusty Burton Custom X.</P>
