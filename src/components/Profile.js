@@ -20,9 +20,14 @@ const D = 1.6
 const DEGREE = `${D}deg`
 
 const FlowAnimate = animated(animated.div)
+const ScaleAnimate = animated(animated.div)
 
 export default function Profile() {
-  
+  const [scale, setScale] = useSpring(() => ({
+    transform: 'perspective(300px) scale(1)',
+    config: { mass: 5, tension: 350, friction: 40 }
+  }))
+
   const autoFlow = useSpring({
     from: {
       transform: `perspective(500px) rotateX(-${DEGREE}) rotateY(${DEGREE}) scale(1)`,
@@ -45,10 +50,25 @@ export default function Profile() {
 
     <ProfileBox>
       <ProfileGrid className="profile-picture">
-        <FlowAnimate style={ autoFlow }>
-          <ProfilePictureBorder>
-            <ProfilePicture />
-          </ProfilePictureBorder>
+        <FlowAnimate style={ autoFlow } >
+          <ScaleAnimate 
+          onMouseMove={() => setScale({ 
+            transform: 'perspective(300px) scale(1.1)'})}
+          onMouseLeave={() => setScale({ 
+            transform: 'perspective(300px) scale(1)' })}
+          style={{
+            width: '100%', 
+            display: 'flex', 
+            'align-items': 'center',
+            'justify-content': 'center',
+            cursor: 'cell',
+            transform: scale.transform,
+          }}
+          >
+            <ProfilePictureBorder>
+              <ProfilePicture />
+            </ProfilePictureBorder>
+          </ScaleAnimate>
         </FlowAnimate>
 
         <Name>

@@ -78,6 +78,7 @@ export const Header = styled.h1`
   font-style: ${props => props.fontStyle ? props.fontStyle : 'none'};
   width: ${props => props.w ? props.w : 'auto'};
   text-shadow: ${props => props.shadow? '13px 13px rgba(0,0,0,.3)':'none'};
+  cursor: crosshair;
   @media (max-width: 1000px) {
     font-size: 2.2rem;
   }
@@ -216,7 +217,7 @@ export const LinkIcons = styled.span`
 
   &:hover {
     border-radius: 5px;
-    background-color: rgb(209, 209, 26);
+    background-color: rgb(178, 178, 53);
     transform: scale(1.2);
   }
   @media (max-width: 1000px) {

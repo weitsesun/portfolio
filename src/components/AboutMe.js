@@ -8,7 +8,7 @@ import {
   Link
 } from '../css/ComponentStyle'
 
-const ColorChanger = animated(animated.div)
+const ScaleChanger = animated(animated.div)
 
 export default function AboutMe() {
   const [headStyle, setHeadStyle] = useSpring(() => ({
@@ -30,7 +30,7 @@ export default function AboutMe() {
 
   return (
     <AboutMeGrid>
-      <ColorChanger
+      <ScaleChanger
           onMouseMove={() => setHeadStyle({ 
             transform: 'perspective(300px) scale(1.2)'})}
           onMouseLeave={() => setHeadStyle({ 
@@ -39,10 +39,10 @@ export default function AboutMe() {
             transform: headStyle.transform,
             }}>
       <Header>About Me</Header>
-      </ColorChanger>
+      </ScaleChanger>
 
       <P>
-        <ColorChanger
+        <ScaleChanger
           onMouseMove={() => setParaStyle({ 
             transform: 'perspective(300px) scale(1.1)'})}
           onMouseLeave={() => setParaStyle({ 
@@ -54,15 +54,15 @@ export default function AboutMe() {
           I build websites by using React/Redux. I acknowledge in building
           RESTful back-end system through NodeJS/Express and SQL/NoSQL databases.
           I enjoy exploring new ideas from innovative websites and talented web designers.
-        (Check <Link onClick={(e) => {
+        {/* (Check <Link onClick={(e) => {
             e.preventDefault();
             window.open("https://www.awwwards.com/")
           }}
-          >here</Link> for the awards of web development)
-          </ColorChanger>
+          >here</Link> for the awards of web development) */}
+          </ScaleChanger>
       </P>
       <P>
-      <ColorChanger
+      <ScaleChanger
           onMouseMove={() => setParaStyle2({ 
             transform: 'perspective(300px) scale(1.1)'})}
           onMouseLeave={() => setParaStyle2({ 
@@ -72,10 +72,10 @@ export default function AboutMe() {
             }}>
         During my free time, I love traveling around the world especially
           when it snows, I go snowboarding with my trusty Burton Custom X.
-          </ColorChanger>
+          </ScaleChanger>
       </P>
       <P>
-      <ColorChanger
+      <ScaleChanger
           onMouseMove={() => setParaStyle3({ 
             transform: 'perspective(300px) scale(1.1)'})}
           onMouseLeave={() => setParaStyle3({ 
@@ -100,7 +100,7 @@ export default function AboutMe() {
           e.preventDefault();
           window.open("https://github.com/hacker-home")
         }}>Hacker Home</Link>
-        </ColorChanger>
+        </ScaleChanger>
       </P>
 
 
