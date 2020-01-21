@@ -53,7 +53,7 @@ export default function Profile() {
         <FlowAnimate style={ autoFlow } >
           <ScaleAnimate 
           onMouseMove={() => setScale({ 
-            transform: 'perspective(300px) scale(1.1)'})}
+            transform: 'perspective(300px) scale(1.2)'})}
           onMouseLeave={() => setScale({ 
             transform: 'perspective(300px) scale(1)' })}
           style={{

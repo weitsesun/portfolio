@@ -32,7 +32,7 @@ export default function AboutMe() {
     <AboutMeGrid>
       <ScaleChanger
           onMouseMove={() => setHeadStyle({ 
-            transform: 'perspective(300px) scale(1.2)'})}
+            transform: 'perspective(300px) scale(1.1)'})}
           onMouseLeave={() => setHeadStyle({ 
             transform: 'perspective(300px) scale(1)' })}
           style={{ 
