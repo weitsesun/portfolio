@@ -69,6 +69,7 @@ export const AboutMeGrid = styled.div`
     width: 100%;
     align-items: center;
     scroll-snap-align: none;
+    text-align: center;
   }
 `
 export const Header = styled.h1`
