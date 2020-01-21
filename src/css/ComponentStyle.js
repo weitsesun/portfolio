@@ -52,8 +52,8 @@ export const AboutMeGrid = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 125, 0, 1);
-  color: white;
+  background: white;
+  color: black;
   letter-spacing: 0.1em;
   width: 100%;
   height: 100%;
@@ -78,6 +78,7 @@ export const Header = styled.h1`
   font-style: ${props => props.fontStyle ? props.fontStyle : 'none'};
   width: ${props => props.w ? props.w : 'auto'};
   text-shadow: ${props => props.shadow? '13px 13px rgba(0,0,0,.3)':'none'};
+  cursor: crosshair;
   @media (max-width: 1000px) {
     font-size: 2.2rem;
   }
@@ -89,6 +90,7 @@ export const P = styled.p`
   line-height: 1.6em;
   font-size: 1.5rem;
   height: 100%;
+  cursor: crosshair;
   width: ${props => props.w ? props.w : '65%'};
   @media (max-width: 1000px) {
     font-size: 1.8rem;
@@ -99,16 +101,15 @@ export const P = styled.p`
 `
 
 export const Link = styled.a`
-  color: rgb(139, 195, 74, 1);
   text-decoration: none;
   cursor: pointer;
-  &:hover {
-    background-color: rgba(150, 200, 30, .4);
-  }
+  color: white;
+  background-color: black;
   &:visited {
-    color: rgba(150, 200, 30, .3);
+    color: black;
   }
 `
+
 
 export const ProfileBox = styled.div`
   padding-top: 0;
@@ -143,7 +144,8 @@ export const ProfileGrid = styled.div`
   min-width: 250px;
   height: 100%;
   min-height: 530px;
-  background: rgba(0, 180, 255, 1);
+  /* background: rgba(0, 180, 255, 1); */
+  background: black;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -179,11 +181,16 @@ export const ProfilePicture = styled.div`
 
 export const Name = styled.div`
   font-family: 'Roboto', sans-serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 900;
   color: white;
   padding: 10px;
   text-align: center;
+  transition: 0.2s;
+  &:hover {
+    cursor: cell;
+    transform: scale(1.1);
+  }
   @media (max-width: 1000px) {
     font-size: 3rem;
   }
@@ -206,11 +213,12 @@ export const LinkIcons = styled.span`
   padding: 10px;
   margin: 0;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.2s;
 
   &:hover {
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgb(178, 178, 53);
+    transform: scale(1.2);
   }
   @media (max-width: 1000px) {
     height: 5rem;
