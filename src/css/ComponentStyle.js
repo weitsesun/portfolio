@@ -93,7 +93,7 @@ export const P = styled.p`
   cursor: crosshair;
   width: ${props => props.w ? props.w : '65%'};
   @media (max-width: 1000px) {
-    font-size: 1.8rem;
+    font-size: 1.1rem;
     height: 100%;
     width: 85%;
     display: ${p => p.mobileView ? 'none' : 'normal'};
