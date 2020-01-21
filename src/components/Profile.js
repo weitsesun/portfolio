@@ -19,8 +19,6 @@ const MY_NAME = 'WEI-TSE SUN'
 const D = 1.6
 const DEGREE = `${D}deg`
 
-// const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 5) / 20, 1]
-// const trans = (x, y, s) => `perspective(500px) rotateX(${ 2 * x }deg) rotateY(${ 2 * y }deg) scale(${s})`
 const FlowAnimate = animated(animated.div)
 
 export default function Profile() {
