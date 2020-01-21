@@ -15,12 +15,13 @@ import {
   LinkIcons,
 } from '../css/ComponentStyle'
 
-const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 5) / 20, 1.3]
-const trans = (x, y, s) => `perspective(500px) rotateX(${3*x}deg) rotateY(${3*y}deg) scale(${s})`
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 5) / 20, 1]
+const trans = (x, y, s) => `perspective(500px) rotateX(${1.5*x}deg) rotateY(${1.5*y}deg) scale(${s})`
+// const trans = (x, y, s) => `perspective(500px) scale(${s})`
 const FlowAnimate = animated(animated.div)
 
 export default function Profile() {
-  const [flow, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 10, tension: 300, friction: 50 } }))
+  const [flow, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 10, tension: 500, friction: 40 } }))
 
   return (
 
@@ -33,7 +34,8 @@ export default function Profile() {
             width: '100%', 
             display: 'flex', 
             'align-items': 'center',
-            'justify-content': 'center'
+            'justify-content': 'center',
+            cursor: 'cell',
           }}
         >
           <ProfilePictureBorder>

@@ -52,8 +52,8 @@ export const AboutMeGrid = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 125, 0, 1);
-  color: white;
+  background: white;
+  color: black;
   letter-spacing: 0.1em;
   width: 100%;
   height: 100%;
@@ -89,6 +89,7 @@ export const P = styled.p`
   line-height: 1.6em;
   font-size: 1.5rem;
   height: 100%;
+  cursor: crosshair;
   width: ${props => props.w ? props.w : '65%'};
   @media (max-width: 1000px) {
     font-size: 1.8rem;
@@ -99,15 +100,12 @@ export const P = styled.p`
 `
 
 export const Link = styled.a`
-  color: rgba(60,60,120,1);
   text-decoration: none;
   cursor: pointer;
-  &:hover {
-    color: white;
-    background-color: black;
-  }
+  color: white;
+  background-color: black;
   &:visited {
-    color: rgba(150, 200, 30, .3);
+    color: black;
   }
 `
 
@@ -145,7 +143,8 @@ export const ProfileGrid = styled.div`
   min-width: 250px;
   height: 100%;
   min-height: 530px;
-  background: rgba(0, 180, 255, 1);
+  /* background: rgba(0, 180, 255, 1); */
+  background: black;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -208,11 +207,12 @@ export const LinkIcons = styled.span`
   padding: 10px;
   margin: 0;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.2s;
 
   &:hover {
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgb(209, 209, 26);
+    transform: scale(1.2);
   }
   @media (max-width: 1000px) {
     height: 5rem;
