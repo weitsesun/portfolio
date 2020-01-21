@@ -167,7 +167,7 @@ export const ProfilePictureBorder = styled.div`
   border: 3px white solid;
   border-radius: 50%;
   @media (max-width: 1000px) {
-    width: 40%;
+    width: 65%;
   }
 `
 
