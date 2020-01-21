@@ -180,11 +180,16 @@ export const ProfilePicture = styled.div`
 
 export const Name = styled.div`
   font-family: 'Roboto', sans-serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 900;
   color: white;
   padding: 10px;
   text-align: center;
+  transition: 0.2s;
+  &:hover {
+    cursor: cell;
+    transform: scale(1.1);
+  }
   @media (max-width: 1000px) {
     font-size: 3rem;
   }

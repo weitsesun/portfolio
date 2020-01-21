@@ -15,13 +15,14 @@ import {
   LinkIcons,
 } from '../css/ComponentStyle'
 
+const MY_NAME = 'WEI-TSE SUN'
+
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 5) / 20, 1]
-const trans = (x, y, s) => `perspective(500px) rotateX(${1.5*x}deg) rotateY(${1.5*y}deg) scale(${s})`
-// const trans = (x, y, s) => `perspective(500px) scale(${s})`
+const trans = (x, y, s) => `perspective(500px) rotateX(${ 2 * x }deg) rotateY(${ 2 * y }deg) scale(${s})`
 const FlowAnimate = animated(animated.div)
 
 export default function Profile() {
-  const [flow, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 10, tension: 500, friction: 40 } }))
+  const [flow, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 500, friction: 30 } }))
 
   return (
 
@@ -44,7 +45,7 @@ export default function Profile() {
         </FlowAnimate>
 
         <Name>
-          {'WEI-TSE SUN'}
+          {MY_NAME}
         </Name>
         <IconBox>
           <LinkIcons
