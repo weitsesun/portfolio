@@ -11,6 +11,10 @@ import {
 const ColorChanger = animated(animated.div)
 
 export default function AboutMe() {
+  const [headStyle, setHeadStyle] = useSpring(() => ({
+    transform: 'perspective(300px) scale(1)',
+    config: { mass: 5, tension: 350, friction: 40 }
+  }))
   const [paraStyle, setParaStyle] = useSpring(() => ({
     transform: 'perspective(300px) scale(1)',
     config: { mass: 5, tension: 350, friction: 40 }
@@ -26,7 +30,16 @@ export default function AboutMe() {
 
   return (
     <AboutMeGrid>
+      <ColorChanger
+          onMouseMove={() => setHeadStyle({ 
+            transform: 'perspective(300px) scale(1.2)'})}
+          onMouseLeave={() => setHeadStyle({ 
+            transform: 'perspective(300px) scale(1)' })}
+          style={{ 
+            transform: headStyle.transform,
+            }}>
       <Header>About Me</Header>
+      </ColorChanger>
 
       <P>
         <ColorChanger

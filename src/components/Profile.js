@@ -16,29 +16,38 @@ import {
 } from '../css/ComponentStyle'
 
 const MY_NAME = 'WEI-TSE SUN'
+const D = 1.6
+const DEGREE = `${D}deg`
 
-const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 5) / 20, 1]
-const trans = (x, y, s) => `perspective(500px) rotateX(${ 2 * x }deg) rotateY(${ 2 * y }deg) scale(${s})`
+// const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 5) / 20, 1]
+// const trans = (x, y, s) => `perspective(500px) rotateX(${ 2 * x }deg) rotateY(${ 2 * y }deg) scale(${s})`
 const FlowAnimate = animated(animated.div)
 
 export default function Profile() {
-  const [flow, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 500, friction: 30 } }))
+  
+  const autoFlow = useSpring({
+    from: {
+      transform: `perspective(500px) rotateX(-${DEGREE}) rotateY(${DEGREE}) scale(1)`,
+      width: '100%', 
+      display: 'flex', 
+      'align-items': 'center',
+      'justify-content': 'center',},
+    to: async next => {
+      while(1) {
+        await next({transform: `perspective(500px) rotateX(-${DEGREE}) rotateY(${DEGREE}) scale(1)`})
+        await next({transform: `perspective(500px) rotateX(-${DEGREE}) rotateY(-${DEGREE}) scale(1)`})
+        await next({transform: `perspective(500px) rotateX(${DEGREE}) rotateY(-${DEGREE}) scale(1)`})
+        await next({transform: `perspective(500px) rotateX(${DEGREE}) rotateY(${DEGREE}) scale(1)`})
+      }
+    },
+    config: {duration: 130, mass: 500, tension: 30, friction: 300},
+  })
 
   return (
 
     <ProfileBox>
       <ProfileGrid className="profile-picture">
-        <FlowAnimate
-          onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-          onMouseLeave={() => set({ xys: [0, 0, 1] })}
-          style={{ transform: flow.xys.interpolate(trans), 
-            width: '100%', 
-            display: 'flex', 
-            'align-items': 'center',
-            'justify-content': 'center',
-            cursor: 'cell',
-          }}
-        >
+        <FlowAnimate style={ autoFlow }>
           <ProfilePictureBorder>
             <ProfilePicture />
           </ProfilePictureBorder>
