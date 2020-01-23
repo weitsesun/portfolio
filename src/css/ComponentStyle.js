@@ -106,6 +106,9 @@ export const Link = styled.a`
   cursor: pointer;
   color: white;
   background-color: black;
+  &:hover {
+    background-color: rgb(178, 178, 53);
+  }
   &:visited {
     color: black;
   }
