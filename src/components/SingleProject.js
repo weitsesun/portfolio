@@ -9,19 +9,30 @@ export default function SingleProject({ project }) {
     transform: 'perspective(300px) scale(1)',
     config: { mass: 5, tension: 350, friction: 40 }
   }))
+  const [containerOpacity, setContainerOpacity] = useSpring(() => ({
+    opacity: 0.5,
+    config: { mass: 5, tension: 350, friction: 40 }
+  }))
 
   return (
     <SingleProjectBox
-      onMouseMove={() => setContainerStyle({ 
-        transform: 'perspective(300px) scale(1.1)'})}
-      onMouseLeave={() => setContainerStyle({ 
-        transform: 'perspective(300px) scale(1)' })}
+      onMouseMove={() => {
+        setContainerStyle({ transform: 'perspective(300px) scale(1.1)' })
+        setContainerOpacity({ opacity: 1 })
+      }
+      }
+      onMouseLeave={() => {
+        setContainerStyle({ transform: 'perspective(300px) scale(1)' })
+        setContainerOpacity({ opacity: 0.5 })
+      }
+      }
       style={{ ...SingleProjectContainer,
         transform: containerStyle.transform,
+        opacity: containerOpacity.opacity,
         }}
       onClick={() => window.open(project.github)}
       >
-        <ImageContainer />
+        <ImageContainer style={{backgroundImage: `url(${project.imageURL})`}}></ImageContainer>
         <InfoContainer>
           <InfoHeader>{project.name}</InfoHeader>
           <Description>{project.description}</Description>
@@ -52,6 +63,8 @@ const ImageContainer = styled.div`
   margin: 0;
   height: 400px;
   width: 100%;
+  border-radius: inherit;
+  background-size: cover;
 `
 
 const InfoContainer = styled.div`
