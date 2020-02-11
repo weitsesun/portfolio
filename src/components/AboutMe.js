@@ -32,7 +32,7 @@ export default function AboutMe() {
     <AboutMeGrid>
       <ScaleChanger
           onMouseMove={() => setHeadStyle({ 
-            transform: 'perspective(300px) scale(1.1)'})}
+            transform: 'perspective(200px) scale(1.1)'})}
           onMouseLeave={() => setHeadStyle({ 
             transform: 'perspective(300px) scale(1)' })}
           style={{ 
@@ -54,11 +54,6 @@ export default function AboutMe() {
           I build websites by using React/Redux. I acknowledge in building
           RESTful back-end system through NodeJS/Express and SQL/NoSQL databases.
           I enjoy exploring new ideas from innovative websites and talented web designers.
-        {/* (Check <Link onClick={(e) => {
-            e.preventDefault();
-            window.open("https://www.awwwards.com/")
-          }}
-          >here</Link> for the awards of web development) */}
           </ScaleChanger>
       </P>
       <P>
