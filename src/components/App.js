@@ -12,8 +12,8 @@ function App() {
         <GlobalStyle />
         <Profile />
         <AboutMeContainer />
+        <ProjectRender />
       </Main>
-      <ProjectRender />
     </>
   );
 }

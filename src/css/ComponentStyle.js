@@ -23,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 export const Main = styled.div`
   display: grid;
   grid-template-columns: 30% 70%;
+  grid-template-rows: 100vh;
   padding: 0;
   margin: 0;
   width: 100%;

@@ -2,14 +2,39 @@ import React from 'react'
 import SingleProject from './SingleProject'
 import styled from 'styled-components'
 import { projectData } from '../projectData'
+import { useSpring, animated } from 'react-spring'
+
+const ScaleChanger = animated(animated.div)
 
 export default function ProjectRender() {
+  const [headStyle, setHeadStyle] = useSpring(() => ({
+    transform: 'perspective(300px) scale(1)',
+    config: { mass: 5, tension: 350, friction: 40 }
+  }))
+
   return (
     <ProjectContainer>
-      <ProjectHeader>My Recent Projects</ProjectHeader>
+      <ScaleChanger
+        onMouseMove={() => setHeadStyle({
+          transform: 'perspective(200px) scale(1.1)'
+        })}
+        onMouseLeave={() => setHeadStyle({
+          transform: 'perspective(300px) scale(1)'
+        })}
+        style={{
+          cursor: 'crosshair',
+          width: '100%',
+          display: 'flex',
+          justifyContent:'center',
+          transform: headStyle.transform,
+        }}>
+        <HeaderContainer>
+          <ProjectHeader>My Recent Projects</ProjectHeader>
+        </HeaderContainer>
+      </ScaleChanger>
       <Projects>
         {projectData.map(project =>
-          <SingleProject project={project} />
+          <SingleProject key={project.name} project={project} />
         )}
       </Projects>
     </ProjectContainer>
@@ -21,29 +46,44 @@ const ProjectContainer = styled.div`
   padding: 0;
   width: 100%;
   height: 100vh;
+  grid-column: span 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* border-top: 20px solid black; */
-  /* background: linear-gradient(90deg, white 70%, black 70%); */
+  background: black;
+  color: white;
+  @media (max-width: 1000px) {
+    height: auto;
+    padding: 0;
+    box-shadow: none;
+    width: 100%;
+    align-items: center;
+    scroll-snap-align: none;
+    text-align: center;
+  }
 `
-
+const HeaderContainer = styled.div`
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  /* background: gray; */
+`
 const ProjectHeader = styled.h1`
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  font-size: 2.2rem;
+  font-size: 3rem;
   font-weight: bold;
-  color: black;
   height: 15vh;
   display: flex;
+  width: 100%;
   text-align: center;
   align-items: center;
-  /* background: yellow; */
 `
 
 const Projects = styled.div`
-  height: 85vh;
+  height: auto;
   width: 100%;
   margin: 0;
   display: flex;

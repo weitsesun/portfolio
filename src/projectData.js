@@ -2,7 +2,7 @@ export const projectData = [
   {
     name: 'Open Source Table',
     description: 'Restaurant Search / Reservation Full-Stack Web Application',
-    github: 'github.com/opensource-table',
+    github: 'https://www.github.com/opensource-table',
     techStack: [
       'React.js',
       'Node.js',
@@ -16,7 +16,7 @@ export const projectData = [
   {
     name: 'Hacker Home',
     description: 'Hotel Search / Reservation Full-Stack Web Application',
-    github: 'github.com/hacker-home',
+    github: 'https://github.com/hacker-home/',
     techStack: [
       'React.js',
       'Node.js',
@@ -31,7 +31,7 @@ export const projectData = [
   {
     name: 'Mobile Step Counter',
     description: 'Step Counter Full-Stack Mobile Application',
-    github: 'github.com/weitsesun/Mobile-Step-Counter',
+    github: 'https://www.github.com/weitsesun/Mobile-Step-Counter',
     techStack: [
       'Javascript',
       'React-Native',
