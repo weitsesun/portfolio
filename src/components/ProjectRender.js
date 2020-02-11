@@ -16,7 +16,7 @@ export default function ProjectRender() {
     <ProjectContainer>
       <ScaleChanger
         onMouseMove={() => setHeadStyle({
-          transform: 'perspective(200px) scale(1.1)'
+          transform: 'perspective(200px) scale(1)'
         })}
         onMouseLeave={() => setHeadStyle({
           transform: 'perspective(300px) scale(1)'
@@ -68,7 +68,6 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  /* background: gray; */
 `
 const ProjectHeader = styled.h1`
   margin: 0;
@@ -80,6 +79,8 @@ const ProjectHeader = styled.h1`
   width: 100%;
   text-align: center;
   align-items: center;
+  text-decoration: underline;
+  text-decoration-color: rgb(178, 178, 53);
 `
 
 const Projects = styled.div`
