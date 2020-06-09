@@ -85,7 +85,7 @@ export default function Profile() {
           />
           <LinkIcons
             icon={resumeIcon}
-            onClick={() => { window.open('https://www.dropbox.com/s/vn2gj0n79rjxpg5/WeiTse%28Wayne%29_Sun_Resume.pdf?dl=0') }}
+            onClick={() => { window.open('https://www.dropbox.com/s/vc4iamlgdm0y31k/WeiTse_Sun_Resume.pdf?dl=0') }}
           />
         </IconBox>
       </ProfileGrid>
