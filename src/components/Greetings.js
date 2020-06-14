@@ -59,7 +59,7 @@ export default function Greetings() {
         </button>
       </div>
 
-      <div className={profile_pic} >
+      <div className={profile_pic}>
         <img src={profile_pic_URL} alt="profile_picture" />
       </div>
     </div>
