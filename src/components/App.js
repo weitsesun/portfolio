@@ -1,23 +1,17 @@
 import React from 'react'
-import Profile from './Profile'
-import AboutMeContainer from './AboutMeContainer'
-import ProjectRender from './ProjectRender'
-import { GlobalStyle, Main } from '../css/ComponentStyle'
+import '../styles/App.css';
+import Logo from './Logo';
+import IconLinks from './IconLinks';
+import Greetings from './Greetings'
 
-function App() {
-
+export default function App() {
   return (
-    <>
-      <Main className="App" >
-        <GlobalStyle />
-        <Profile />
-        <AboutMeContainer />
-        <ProjectRender />
-      </Main>
-    </>
-  );
+    <div className="main">
+      <div className="landing-page">
+        <Logo/>
+        <IconLinks/>
+        <Greetings />
+      </div>
+    </div>
+  )
 }
-
-
-
-export default App;
