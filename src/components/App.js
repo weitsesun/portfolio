@@ -1,23 +1,31 @@
-import React from 'react'
-import Profile from './Profile'
-import AboutMeContainer from './AboutMeContainer'
-import ProjectRender from './ProjectRender'
-import { GlobalStyle, Main } from '../css/ComponentStyle'
+import React, { useRef } from 'react'
+import '../styles/App.css';
+import Logo from './Logo';
+import IconLinks from './IconLinks';
+import Greetings from './Greetings'
+import ArrowDown from './ArrowDown'
+import Skills from './Skills'
+import Projects from './Projects'
 
-function App() {
+export default function App() {
+  const arrowTarget = useRef(null);
 
   return (
-    <>
-      <Main className="App" >
-        <GlobalStyle />
-        <Profile />
-        <AboutMeContainer />
-        <ProjectRender />
-      </Main>
-    </>
-  );
+    <div className="main">
+      <div className="landing-page">
+        <Logo/>
+        <IconLinks/>
+        <Greetings />
+        <ArrowDown arrowTarget={arrowTarget}/>
+      </div>
+
+      <div ref={arrowTarget} className="skills-page" >
+        <Skills />
+      </div>
+
+      <div className="projects-page">
+        <Projects />
+      </div>
+    </div>
+  )
 }
-
-
-
-export default App;

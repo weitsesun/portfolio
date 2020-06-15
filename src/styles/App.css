@@ -1,0 +1,41 @@
+*, *::before, *::after {
+  margin: 0;
+  box-sizing: border-box;
+  outline-style: none;
+}
+
+body {
+  --background-color: #1a1a1a;
+  --primary-color: #55E8BC;
+  --secondary-color: #F4F4F4;
+  --topic-font-size: 2rem;
+  --skill-font-color: #E0E0E0;
+  --skill-font-size: 1.5rem;
+  --content-max-width: 1500px;
+  --content-min-height: 1100px;
+  --tech-box-background-color: #484949;
+  font-family: 'Mada', sans-serif;
+}
+
+.main {
+  background-color: var(--background-color);
+  min-height: 100vh;
+}
+
+.landing-page {
+  min-height: var(--content-min-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.projects-page {
+  padding: 3rem 0;
+  min-height: 750px;
+}
+
+.skills-page {
+  padding: 4rem 0;
+}
