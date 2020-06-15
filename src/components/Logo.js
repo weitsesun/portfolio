@@ -9,6 +9,8 @@ export default function Logo() {
   }
 
   return (
+    <div className="logo-container">
       <img onClick={() => scrollToTop()} className="logo" src={logo} alt="logo"/>
+    </div>
   )
 }

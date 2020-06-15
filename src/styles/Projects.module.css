@@ -1,0 +1,90 @@
+.project_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.header_container {
+  display: flex;
+  margin-right: 2rem;
+}
+
+.topic {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: var(--topic-font-size);
+  letter-spacing: 5px;
+  color: var(--skill-font-color);
+}
+
+.bar {
+  height: 350px;
+  width: 3px;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px 0 var(--primary-color);
+}
+
+.repo_container {
+  display:flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.repo_table {
+  display: flex;
+  color: var(--skill-font-color);
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.repo_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.repo_content a:visited {
+  text-decoration: none;
+  color: var(--skill-font-color);
+}
+
+.repo_name {
+  text-transform: uppercase;
+  font-size: var(--skill-font-size);
+  margin-bottom: .5rem;
+  cursor: pointer;
+}
+
+.repo_name:hover {
+  text-decoration: underline;
+}
+
+.repo_pic {
+  width: 215px;
+  height: 107px;
+  cursor: pointer;
+}
+
+.tech_box_outer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tech_box {
+  background-color: var(--tech-box-background-color);
+  padding: .3rem 1rem .3rem 1rem;
+  border-radius: 1000000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 3px 1rem 3px 0;
+}
+
+.tech_atom {
+  font-weight: 300;
+}

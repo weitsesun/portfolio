@@ -6,3 +6,17 @@
   bottom: 30px;
 }
 
+.icon-container.img {
+  display: inline-block;
+}
+
+@media (max-width: 1000px) {
+  .icon-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin: 1rem auto;
+    left: auto;
+    display: relative;
+  }
+}

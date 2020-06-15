@@ -6,6 +6,7 @@ import {
   topic,
   bar,
   table_container,
+  genre_container,
   genre,
   table,
 } from "../styles/Skills.module.css";
@@ -18,9 +19,11 @@ export default function Skills() {
         <div className={bar}></div>
       </div>
 
-      {skillsData.map((genre) => (
-        <SkillTable data={genre} />
-      ))}
+      <div className={genre_container}>
+        {skillsData.map((genre) => (
+          <SkillTable data={genre} />
+        ))}
+      </div>
     </div>
   );
 }

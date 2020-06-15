@@ -13,20 +13,20 @@ export default function ArrowDown({ arrowTarget }) {
   }
 
   return (
-    <div
-      onClick={() => scrollToSkillsPage()}
-      className="absolute-pos arrow-container"
-    >
+    <>
       <img
         className="arrowDown absolute-pos"
+        onClick={() => scrollToSkillsPage()}
+
         src={arrowDown}
         alt="arrow down"
       />
       <img
         className="arrow-shadow absolute-pos"
+        onClick={() => scrollToSkillsPage()}
         src={arrowDown}
         alt="arrow down"
       />
-    </div>
+    </>
   );
 }

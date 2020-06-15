@@ -1,9 +1,7 @@
 .absolute-pos {
   position: absolute;
+  margin: 0 auto;
   bottom: 0;
-}
-
-.arrow-container {
   cursor: pointer;
 }
 

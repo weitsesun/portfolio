@@ -13,6 +13,7 @@ body {
   --skill-font-size: 1.5rem;
   --content-max-width: 1500px;
   --content-min-height: 1100px;
+  --tech-box-background-color: #484949;
   font-family: 'Mada', sans-serif;
 }
 
@@ -30,3 +31,11 @@ body {
   flex-wrap: wrap;
 }
 
+.projects-page {
+  padding: 3rem 0;
+  min-height: 750px;
+}
+
+.skills-page {
+  padding: 4rem 0;
+}

@@ -12,7 +12,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* margin-top: 100px; */
   max-width: var(--content-max-width);
 }
 
@@ -37,20 +36,27 @@
   font-size: var(--skill-font-size);
   display: flex;
   justify-content:center;
+  flex-wrap: wrap;
+}
+
+.genre_container {
+  width: 100%;
 }
 
 .genre {
   text-transform: uppercase;
   color: var(--skill-font-color);
-  /* width: 12rem; */
-  width: 10%;
-  font-weight: lighter;
+  /* width: 10%; */
+  width: fit-content;
+  /* font-weight: lighter; */
+  margin-bottom: 2rem;
 }
 
 .table {
-  max-width: 480px;
+  max-width: 50%;
   display: grid;
-  grid-template-columns: repeat(3, 10rem);
+  grid-template-columns: repeat(auto-fill, 200px);
   grid-auto-rows: 4rem;
   justify-items: center;
+  align-items: flex-start;
 }

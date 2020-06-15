@@ -5,6 +5,7 @@ import IconLinks from './IconLinks';
 import Greetings from './Greetings'
 import ArrowDown from './ArrowDown'
 import Skills from './Skills'
+import Projects from './Projects'
 
 export default function App() {
   const arrowTarget = useRef(null);
@@ -20,6 +21,10 @@ export default function App() {
 
       <div ref={arrowTarget} className="skills-page" >
         <Skills />
+      </div>
+
+      <div className="projects-page">
+        <Projects />
       </div>
     </div>
   )
