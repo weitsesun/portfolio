@@ -1,0 +1,46 @@
+.absolute-pos {
+  position: absolute;
+  bottom: 0;
+}
+
+.arrow-container {
+  cursor: pointer;
+}
+
+.arrowDown {
+  animation: up-and-down 2s infinite;
+}
+
+.arrow-shadow {
+  transform: scale(.95);
+  animation: shadow 2s infinite;
+}
+
+@keyframes up-and-down {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 5px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    bottom: 5px;
+    opacity: .5;
+
+  }
+  50% {
+    bottom: 0;
+    opacity: 0;
+
+  }
+  100% {
+    bottom: 5px;
+    opacity: .5;
+  }
+}

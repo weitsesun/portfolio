@@ -17,7 +17,7 @@ import {
 const profile_pic_URL = "https://wtsesun.s3.us-east-2.amazonaws.com/portfolio/profile_picture/profile-picture.png"
 
 export default function Greetings() {
-  const [isHover, setIsHover] = useState(true);
+  const [isHover, setIsHover] = useState(false);
 
   function sendEmail() {
     window.open(

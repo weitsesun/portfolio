@@ -8,6 +8,11 @@ body {
   --background-color: #1a1a1a;
   --primary-color: #55E8BC;
   --secondary-color: #F4F4F4;
+  --topic-font-size: 2rem;
+  --skill-font-color: #E0E0E0;
+  --skill-font-size: 1.5rem;
+  --content-max-width: 1500px;
+  --content-min-height: 1100px;
   font-family: 'Mada', sans-serif;
 }
 
@@ -17,9 +22,11 @@ body {
 }
 
 .landing-page {
-  height: 80vh;
+  min-height: var(--content-min-height);
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
+
