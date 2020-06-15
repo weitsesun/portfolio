@@ -48,8 +48,11 @@
 }
 
 .repo_content a:visited {
-  text-decoration: none;
   color: var(--skill-font-color);
+}
+
+.repo_content a:link {
+  text-decoration: none;
 }
 
 .repo_name {
@@ -87,4 +90,10 @@
 
 .tech_atom {
   font-weight: 300;
+}
+
+@media (max-width: 950px) {
+  .repo_table {
+    flex-direction: column;
+  }
 }
