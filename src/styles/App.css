@@ -24,7 +24,8 @@ body {
 }
 
 .landing-page {
-  min-height: var(--content-min-height);
+  /* min-height: var(--content-min-height); */
+  min-height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
