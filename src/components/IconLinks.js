@@ -6,7 +6,6 @@ import "../styles/IconLinks.css";
 import URLs from "../data/IconLinks.js";
 
 export default function IconLinks() {
-  console.log(URLs.resumeURL)
   return (
     <div className="icon-container">
       <a href={URLs.resumeURL} target="_blank" rel="noopener noreferrer">
