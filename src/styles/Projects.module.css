@@ -52,6 +52,7 @@
 }
 
 .repo_content a:link {
+  color: var(--skill-font-color);
   text-decoration: none;
 }
 
