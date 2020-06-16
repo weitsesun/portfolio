@@ -1,16 +1,21 @@
 .icon-container {
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 50px;
-  bottom: 30px;
+  justify-content: space-between;
 }
 
-.icon-container.img {
-  display: inline-block;
+.icon-container img:hover {
+  box-shadow: 0 0 5px 1px var(--primary-color);
 }
 
-@media (max-width: 1000px) {
+.icon {
+  margin: 0 .5rem;
+  transform: scale(0.9);
+}
+/* .icon-container img {
+  margin-right: 1rem;
+} */
+
+/* @media (max-width: 1000px) {
   .icon-container {
     display: flex;
     flex-direction: row;
@@ -19,4 +24,4 @@
     left: auto;
     display: relative;
   }
-}
+} */

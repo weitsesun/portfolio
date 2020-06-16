@@ -1,17 +1,26 @@
-.logo {
-  position: fixed;
-  left: 40px;
-  cursor: pointer;
-}
-
 .logo-container {
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   top: 0;
   width: 100%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 1rem 2rem;
   background-color: var(--background-color);
   z-index: 10;
   display: flex;
   align-items: center;
+}
+
+
+.logo-container img {
+  border-radius: 6px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.logo:hover {
+  box-shadow: 0 0 5px 1px var(--primary-color);
 }

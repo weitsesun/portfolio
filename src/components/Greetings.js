@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import cx from "classnames";
+import URLs from "../data/greetingData.js";
+
 import {
   greeting_container,
   text,
@@ -11,17 +13,26 @@ import {
   button,
   expand,
   text_container,
-  profile_pic
+  profile_pic,
+  resume_button
 } from "../styles/Greetings.module.css";
 
-const profile_pic_URL = "https://wtsesun.s3.us-east-2.amazonaws.com/portfolio/profile_picture/profile-picture.png"
+// const profile_pic_URL = "https://wtsesun.s3.us-east-2.amazonaws.com/portfolio/profile_picture/profile-picture.png"
 
 export default function Greetings() {
   const [isHover, setIsHover] = useState(false);
+  const [isHover2, setIsHover2] = useState(false);
 
   function sendEmail() {
     window.open(
-      "https://mail.google.com/mail/?view=cm&fs=1&to=wtse.sun@gmail.com",
+      URLs.email,
+      "_blank"
+    );
+  }
+
+  function checkResume() {
+    window.open(
+      URLs.resumeURL,
       "_blank"
     );
   }
@@ -48,6 +59,16 @@ export default function Greetings() {
             <span className={underline}>Node.js</span>
           </span>
         </div>
+        
+        <div>
+        <button
+          className={cx(button, resume_button)}
+          onClick={() => checkResume()}
+          onMouseEnter={() => setIsHover2(true)}
+          onMouseLeave={() => setIsHover2(false)}
+        >
+          Resume<div className={cx(isHover2 ? expand : "")}></div>
+        </button>
 
         <button
           className={button}
@@ -57,10 +78,13 @@ export default function Greetings() {
         >
           Let's chat ➝<div className={cx(isHover ? expand : "")}></div>
         </button>
+        </div>
+
+        
       </div>
 
       <div className={profile_pic}>
-        <img src={profile_pic_URL} alt="profile_picture" />
+        <img src={URLs.profile_pic_URL} alt="profile_picture" />
       </div>
     </div>
   );
