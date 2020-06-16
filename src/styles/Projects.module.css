@@ -59,6 +59,7 @@
 .repo_name {
   text-transform: uppercase;
   font-size: var(--skill-font-size);
+  color: var(--skill-font-color);
   margin-bottom: .5rem;
   cursor: pointer;
 }
