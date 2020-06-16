@@ -11,17 +11,3 @@
   margin: 0 .5rem;
   transform: scale(0.9);
 }
-/* .icon-container img {
-  margin-right: 1rem;
-} */
-
-/* @media (max-width: 1000px) {
-  .icon-container {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    margin: 1rem auto;
-    left: auto;
-    display: relative;
-  }
-} */
