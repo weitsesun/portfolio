@@ -1,17 +1,19 @@
-.logo {
-  position: fixed;
-  left: 40px;
-  cursor: pointer;
-}
-
 .logo-container {
   position: fixed;
-  top: 0;
   width: 100%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: var(--spacing);
+  top: 0;
+  left: 0;
+  cursor: pointer;
   background-color: var(--background-color);
   z-index: 10;
   display: flex;
+  justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .logo-container {
+    padding: var(--spacing) var(--spacing-lg);
+  }
 }

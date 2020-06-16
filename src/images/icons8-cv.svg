@@ -1,7 +1,7 @@
-<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g filter="url(#filter0_d)">
-<rect x="10" y="5" width="40" height="40" rx="7" fill="#F4F4F4"/>
-<rect x="10" y="5" width="40" height="40" rx="7" fill="url(#pattern0)"/>
+<rect x="0" y="0" width="40" height="40" rx="7" fill="#55e8bc"/>
+<rect x="0" y="0" width="40" height="40" rx="7" fill="url(#pattern0)"/>
 </g>
 <defs>
 <filter id="filter0_d" x="0" y="0" width="60" height="60" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

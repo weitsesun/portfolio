@@ -15,6 +15,7 @@ export default function IconLinks() {
 
       <a href={URLs.linkedinURL} target="_blank" rel="noopener noreferrer">
         <img className="icon" src={linkedin} alt="linkedin" />
+
       </a>
 
       <a href={URLs.githubURL} target="_blank" rel="noopener noreferrer">

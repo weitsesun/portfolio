@@ -12,11 +12,10 @@ export default function App() {
 
   return (
     <div className="main">
+      <Logo />
       <div className="landing-page">
-        <Logo/>
-        <IconLinks/>
         <Greetings />
-        <ArrowDown arrowTarget={arrowTarget}/>
+        <ArrowDown arrowTarget={arrowTarget} />
       </div>
 
       <div ref={arrowTarget} className="skills-page" >
