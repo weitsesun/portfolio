@@ -4,10 +4,11 @@
 }
 
 .icon-container img:hover {
-  box-shadow: 0 0 5px 1px var(--primary-color);
+  box-shadow: 0 0 10px 1px var(--primary-color);
 }
 
 .icon {
   margin: 0 .5rem;
   transform: scale(0.9);
+  border-radius: 6px;
 }

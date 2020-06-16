@@ -12,15 +12,10 @@
   align-items: center;
 }
 
-
-.logo-container img {
-  border-radius: 6px;
-}
-
 .logo {
   cursor: pointer;
 }
 
 .logo:hover {
-  box-shadow: 0 0 5px 1px var(--primary-color);
+  box-shadow: 0 0 10px 2px var(--primary-color);
 }
