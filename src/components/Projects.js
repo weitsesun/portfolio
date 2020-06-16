@@ -45,7 +45,7 @@ function Repo({ repo }) {
 
         <div className={tech_box_outer}>
           {repo.tech_stack.map((tech) => (
-            <span className={tech_box}>
+            <span key={repo.name + tech} className={tech_box}>
               <span className={tech_atom}>{tech}</span>
             </span>
           ))}

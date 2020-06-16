@@ -21,7 +21,7 @@ export default function Skills() {
 
       <div className={genre_container}>
         {skillsData.map((genre) => (
-          <SkillTable data={genre} />
+          <SkillTable key={genre.name} data={genre} />
         ))}
       </div>
     </div>
