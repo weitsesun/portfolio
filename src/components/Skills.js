@@ -9,6 +9,7 @@ import {
   genre_container,
   genre,
   table,
+  skill,
 } from "../styles/Skills.module.css";
 
 export default function Skills() {
@@ -34,7 +35,9 @@ function SkillTable({ data }) {
       <div className={genre}>{data.name}</div>
       <div className={table}>
         {data.skills.map((s) => (
-          <div key={s}>{s}</div>
+          <div className={skill} key={s}>
+            {s}
+          </div>
         ))}
       </div>
     </div>

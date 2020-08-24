@@ -60,3 +60,7 @@
   justify-items: center;
   align-items: flex-start;
 }
+
+.skill {
+  font-weight: 200;
+}
