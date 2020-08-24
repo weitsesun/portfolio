@@ -35,7 +35,7 @@
   color: var(--skill-font-color);
   font-size: var(--skill-font-size);
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
