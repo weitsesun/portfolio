@@ -48,7 +48,7 @@ export default function Greetings() {
           <span className={cx(text, large)}>WEI-TSE SUN</span>
           <br />
           <span className={cx(text, large)}>a </span>
-          <span className={cx(text, large, shine)}>Full Stack Engineer</span>
+          <span className={cx(text, large, shine)}>Software Engineer</span>
         </div>
 
         <div>
