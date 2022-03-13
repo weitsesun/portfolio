@@ -26,7 +26,7 @@
   width: 30%;
   min-width: 250px;
   background-color: var(--primary-color);
-  box-shadow: 0 0 10px 0 var(--primary-color);
+  /* box-shadow: 0 0 10px 0 var(--primary-color); */
 }
 
 .table_container {
@@ -59,4 +59,13 @@
   grid-auto-rows: 4rem;
   justify-items: center;
   align-items: flex-start;
+}
+
+@media screen and (max-width: 600px) {
+  .table {
+    grid-auto-rows: 2rem;
+  }
+  .table_container {
+    margin-top: 2rem;
+  }
 }

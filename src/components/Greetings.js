@@ -76,7 +76,7 @@ export default function Greetings() {
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
         >
-          Let's chat ➝<div className={cx(isHover ? expand : "")}></div>
+          Email me ➝<div className={cx(isHover ? expand : "")}></div>
         </button>
         </div>
 

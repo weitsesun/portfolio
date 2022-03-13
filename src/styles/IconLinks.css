@@ -4,7 +4,8 @@
 }
 
 .icon-container img:hover {
-  box-shadow: 0 0 10px 1px var(--primary-color);
+  box-shadow: 3px 3px 8px 0px var(--secondary-color);
+  transition:0.1s;
 }
 
 .icon {
