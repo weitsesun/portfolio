@@ -5,15 +5,17 @@
 }
 
 body {
-  --background-color: #1a1a1a;
-  --primary-color: #55E8BC;
-  --secondary-color: #F4F4F4;
+  --background-color: #ededed;
+  --primary-color: #235ed3;
+  --secondary-color: #2b2b2b;
   --topic-font-size: 2rem;
-  --skill-font-color: #E0E0E0;
+  --skill-font-color: #2b2b2b;
   --skill-font-size: 1.5rem;
   --content-max-width: 1500px;
   --content-min-height: 1100px;
-  --tech-box-background-color: #484949;
+  --tech-box-background-color: #ffffff;
+  --button-shadow:2px 2px 10px 1px #d3d3d380;
+  --button-shadow-hover:2px 2px 10px 1px #dbdbdb80;
   font-family: 'Mada', sans-serif;
 }
 
